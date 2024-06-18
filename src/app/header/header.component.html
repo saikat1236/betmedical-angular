@@ -1,0 +1,228 @@
+<header class="header ">
+    <!-- <app-topbar></app-topbar> -->
+    <section class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul>
+                        <!-- <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+                          <span class="navbar-toggler-icon"></span>
+                        </button> -->
+                        <li><a href="mailto:general@betmedical.com"><i class="fa fa-envelope"></i>general@betmedical.com</a></li>
+                        <li class="vr" style="color: black;"></li>
+                        <li><a href="tel:+91 4428344639"><i class="fa fa-phone-alt"></i>+91-44-28344639</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar navbar-expand-md navbar-light bg-light" [ngClass]="{'fixed': isNavbarFixed}" (scroll) = "onScroll()">
+        <div class="container">
+        
+        <!-- <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <!-- <div class="container" style="background-color: #CEF5F5;" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed"> -->
+            <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <div class=" top-bar row d-none">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul>
+                        <li><a href="mailto:general@betmedical.com"><i class="fa fa-envelope"></i>general@betmedical.com</a></li>
+                        <li class="vr" style="color: black;"></li>
+                        <li><a href="tel:+91 4428344639"><i class="fa fa-phone-alt"></i>+91-44-28344639</a></li>
+                    </ul>
+                </div>
+            </div> -->
+        <!-- </div>/\ -->
+    
+        <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+     
+                <img src="assets/logo@2x.png" alt="" class="logo img-fluid" style="height: 70px;">
+
+            <ul class="navbar-nav ms-auto" style="margin-left: 150px;">
+                <li class="d-inline d-lg-none">
+                    <button data-toggle="collapse" data-target="#navbarContent" class="close float-right" (click)="collapsed = !collapsed">&times;</button>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link" (click)="collapsed = !collapsed">
+                    Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/directors-message" class="nav-link" (click)="collapsed = !collapsed">
+                        Director's Message
+                    </a>
+                </li>
+                <li class="nav-item" triggers="'hover" #drop="ngbDropdown" ngbDropdown *ngIf="categories.length"><!--- -->
+                    <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button" (mouseenter)="showDrop(drop)" (mouseleave)="closeDrop($event, drop);"><!-- -->
+                        Products
+                    </a>
+                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop)"> <!---->
+                        <ng-container *ngFor="let category of categories; let i=index;">
+                            <li ngbDropdown class="sub-dropdown" *ngIf="!category.child.length">
+                                <a ngbDropdownItem class="nav-link" tabindex="0" role="button" [routerLink]="['/category', category.slug]" (click)="collapsed = !collapsed"><!--(click)="collapsed = !collapsed"-->
+                                    {{ category.name }}
+                                </a>
+                            </li>
+                            <li ngbDropdown class="sub-dropdown" *ngIf="category.child.length">
+                                <a ngbDropdownToggle  class="dropdown-submenu-title" >{{ category.name }}</a><!-- [routerLink]="['/category', category.slug]" (click)="$event.preventDefault()"  (click)="collapsed = !collapsed"-->
+                                <ul class="dropdown-submenu" ngbDropdownMenu>
+                                    <ng-container *ngFor="let second of category.child; let i=index;">
+                                        <li *ngIf="!second.child">
+                                            <a ngbDropdownItem [routerLink]="['/category', second.slug]" (click)="collapsed = !collapsed">{{ second.name }}</a><!--(click)="$event.preventDefault()"  (click)="collapsed = !collapsed"-->
+                                        </li>
+                                        <li *ngIf="second.child" ngbDropdown class="fl-sub-dropdown">
+                                            <a ngbDropdownToggle class="dropdown-submenu-title" >{{ second.name }}</a><!-- [routerLink]="['/category', second.slug]" (click)="collapsed = !collapsed"-->
+                                            <ul class="dropdown-sub-submenu" ngbDropdownMenu>
+                                                <ng-container *ngFor="let third of second.child; let i=index;">
+                                                    <li><a ngbDropdownItem [routerLink]="['/category', third.slug]" (click)="collapsed = !collapsed">{{third.name}}</a></li><!---(click)="$event.preventDefault()"  (click)="collapsed = !collapsed"-->
+                                                </ng-container>
+                                            </ul>
+                                        </li>
+                                    </ng-container>                                    
+                                </ul>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </li>
+    
+                <!-- <li class="nav-item" ngbDropdown>
+                    <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button">
+                        Products
+                    </a>
+                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu">
+                        <li ngbDropdown class="sub-dropdown">
+                            <a ngbDropdownToggle href="#" class="dropdown-submenu-title">Surgical OR Tables</a>
+                            <ul class="dropdown-submenu" ngbDropdownMenu>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Neurosurgery</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Orthopaedics / Trauma Surgery</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Cardiac Surgery</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Bariatric Surgery</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Urology Surgery</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Gynecological surgery</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">General Surgery</a></li>
+                                <li ngbDropdown class="fl-sub-dropdown">
+                                    <a ngbDropdownToggle href="#" class="dropdown-submenu-title">Accessories</a>
+                                    <ul class="dropdown-sub-submenu" ngbDropdownMenu>
+                                        <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">BenQ Accessories</a></li>
+                                        <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Doro Cranial Stabilization & Brain Retractor Systems</a></li>
+                                        <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Kyra Comfort Stirrups</a></li>
+                                        <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">KYRA® Curve™ Spine Frame</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Surgical LED OR Lights</a></li>
+                        <li ngbDropdown class="sub-dropdown">
+                            <a ngbDropdownToggle href="#" class="dropdown-submenu-title">Mobile Imaging System (C-Arms)</a>
+                            <ul class="dropdown-submenu" ngbDropdownMenu>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Surgical C-Arms (Ortho/Uro/Gastro)</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Vascular C-Arms</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Interventional C-Arms (Hybrid Suite)</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Neuro Spine C-Arms (Intraoperative 3D Imaging)</a></li>
+                            </ul>
+                        </li>
+                        <li><a ngbDropdownItem routerLink="/product-category" (click)="$event.preventDefault()">Mini Ortho C-Arm</a></li>
+                        <li ngbDropdown class="sub-dropdown">
+                            <a ngbDropdownToggle href="#" class="dropdown-submenu-title">Imaging Tables</a>
+                            <ul class="dropdown-submenu" ngbDropdownMenu>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Orthopedic Navigation Imaging Table</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Vascular Catheterization Table</a></li>
+                            </ul>
+                        </li>
+                        <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Spine Tables</a></li>
+                        <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Therenva Fusion Imaging & Navigation</a></li>
+                        <li ngbDropdown class="sub-dropdown">
+                            <a ngbDropdownToggle href="#" class="dropdown-submenu-title">Breast Imaging System</a>
+                            <ul class="dropdown-submenu" ngbDropdownMenu>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Analogue Mammography</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Digital Mammography</a></li>
+                            </ul>
+                        </li>
+                        <li ngbDropdown class="sub-dropdown">
+                            <a ngbDropdownToggle href="#" class="dropdown-submenu-title">Critical Care Ventilators</a>
+                            <ul class="dropdown-submenu" ngbDropdownMenu>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">High Frequency True Oscillator</a></li>
+                                <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Turbine Based Ventilators</a></li>
+                            </ul>
+                        </li>
+                        <li><a ngbDropdownItem href="#" (click)="$event.preventDefault()">Digital Radiography</a></li>
+                    </ul>
+                </li> -->
+
+                <li class="nav-item">
+                    <a routerLink="/services-support" class="nav-link" (click)="collapsed = !collapsed">
+                        Services & Support
+                    </a>
+                </li>
+
+                <li class="nav-item" ngbDropdown #drop1="ngbDropdown">
+                    <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button" (mouseenter)="showDrop(drop1);" (mouseleave)="closeDrop($event, drop1);">
+                        Career
+                    </a>
+                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop1);">
+                        <li><a ngbDropdownItem routerLink="/work-with-bet-medical" (click)="collapsed = !collapsed">Work with Bet Medical</a></li><!--(click)="$event.preventDefault()"-->
+                        <li><a ngbDropdownItem routerLink="/submit-cv-online" (click)="collapsed = !collapsed">Submit CV Online</a></li><!--(click)="$event.preventDefault()"-->
+                    </ul>
+                </li>
+
+                <li class="nav-item" ngbDropdown #drop2="ngbDropdown">
+                    <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown4" role="button" (mouseenter)="showDrop(drop2);" (mouseleave)="closeDrop($event, drop2);">
+                        Gallery
+                    </a>
+                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop2);">
+                        <li><a ngbDropdownItem routerLink="/events" (click)="collapsed = !collapsed">Events</a></li><!--(click)="$event.preventDefault()"-->
+                        <li><a ngbDropdownItem routerLink="/conferences" (click)="collapsed = !collapsed">Conferences</a></li><!--(click)="$event.preventDefault()"-->
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a routerLink="/contact-us" class="nav-link" (click)="collapsed = !collapsed">
+                        Contact Us
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="//admin.betmedical.com" target="_blank" class="nav-link">
+                        Library
+                    </a>
+                </li>
+            
+            </ul>
+        </div>
+        </div>
+    </nav>
+</header>  
+
+
+  <!-- <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-end">
+            <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">
+              Dynamic
+            </a>
+            <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+              <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+            </div>
+          </li>
+          
+          
+          <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-start">
+  <button class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">
+    Dynamic
+  </button>
+  <ul ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+    <li>
+    <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+    </li>
+    <li>
+    <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+    </li>
+    <li>
+    <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+    </li>
+  </ul>
+  </div> -->
+ 

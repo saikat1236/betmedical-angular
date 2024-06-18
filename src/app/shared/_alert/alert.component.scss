@@ -1,0 +1,21 @@
+// .alert-success{
+//   padding-left:50px;
+//   &:before{
+//     content:'';
+//     position: absolute;
+//     left:16px;
+//     width: 24px;
+//     height: 24px;
+//     background-image: url('../../../assets/images/svg/success.svg');
+//     background-repeat: no-repeat;
+//   }
+// }
+.alert {
+  .btn-close{
+    width: 0.3em;
+    height: 0.3em;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="breadcrumb_wrap">
+    <ul>
+        <!-- <li>
+            <a><i class="far fa-home"></i></a>
+        </li> -->
+        <li *ngFor="let breadcrumb of (breadcrumbs$ | async)">
+            <a [href]="breadcrumb.url">{{ breadcrumb.label }}</a>
+        </li>
+    </ul>
+</div>

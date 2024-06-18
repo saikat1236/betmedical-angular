@@ -1,0 +1,57 @@
+<!--Product category Start-->
+<section class="productcategory-sec pad-tb" *ngIf="category.type == 'list'">
+    <div class="container">
+        <ng-container *ngFor="let product of products; let i=index">
+            <div class="single-productincat">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 cimg-wrap">
+                        <div class="category-img-wrapper">
+                            <div class="img">
+                                <img [src]="product.front_image" class="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 ccontent-wrap">
+                        <div class="category-shortcontent">
+                            <h5>{{category.name}}</h5>
+                            <div class="section-title">
+                                <h2 class="main-title">{{product.name}}</h2>
+                            </div>
+                            <div [innerHTML]="product.short_desc"></div>
+                            <div class="category-link">
+                                <a [routerLink]="['/', product.slug]">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</section>
+<section class="productcategory-sec pad-tb" *ngIf="category.type == 'grid'">
+    <div class="container">
+        <div class="row">           
+            <div class="col-md-4 product-grid" *ngFor="let product of products; let i=index">
+                <div class="product-inner">
+                    <div class="product-img">
+                        <a [routerLink]="['/', product.slug]"><img [src]="product.front_image" class="img-fluid" /></a>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-title">
+                            <h3 class="title"><a [routerLink]="['/', product.slug]">{{product.name}}</a></h3>
+                        </div>
+                        <div [innerHTML]="product.short_desc | truncate : 200 : false : '...'" class="desc"></div>
+                        <div class="product-btn text-center">
+                            <a [routerLink]="['/', product.slug]">View More</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+</section>
+<!--Product category End-->
+

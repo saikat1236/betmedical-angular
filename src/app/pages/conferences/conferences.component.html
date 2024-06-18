@@ -1,0 +1,22 @@
+<!--Gallery Events Start-->
+<section class="gallery pad-tb">
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let event of events; let i=index;">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="album-gallery-wrap">
+                        <div class="album-img-wrap">
+                            <a [routerLink]="['/conferences-detail', event.slug]" title="{{ event.name }}">
+                                <img src="{{event.images[0]}}" class="img-fluid" alt="{{ event.name }}" />
+                            </a>
+                        </div>
+                        <div class="album-content-wrap">
+                            <h4><a [routerLink]="['/conferences-detail', event.slug]" title="{{ event.name }}">{{ event.name }}</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+<!--Gallery Events End-->

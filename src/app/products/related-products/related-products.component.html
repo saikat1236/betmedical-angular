@@ -1,0 +1,105 @@
+<!-- <div class="row">
+    <div class="col-md-3 col-sm-3">
+        <div class="relatedproduct-block">
+            <div class="relatedproduct-thumb">
+                <a href="">
+                    <img src="assets/images/products/mini-ortho-c-arm/Orthoscan-TAU-1515-1.jpg" />
+                </a>
+            </div>
+            <div class="relatedproduct-info">
+                <h3 class="related-product-title">
+                    <a href="">Orthoscan TAU 1515</a>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-3">
+        <div class="relatedproduct-block">
+            <div class="relatedproduct-thumb">
+                <a href="">
+                    <img src="assets/images/products/mini-ortho-c-arm/Orthoscan-TAU-2020-1.jpg" />
+                </a>
+            </div>
+            <div class="relatedproduct-info">
+                <h3 class="related-product-title">
+                    <a href="">Orthoscan TAU 2020</a>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div> -->
+<owl-carousel-o #carousel [options]="options">
+    <ng-container *ngFor="let product of products">
+        <ng-template carouselSlide [width]="setWidth">
+            <div class="relatedproduct-block">
+                <div class="relatedproduct-thumb">
+                    <a [routerLink]="['/', product.slug]" title="{{product.name}}">
+                        <img [src]="product.front_image" />
+                    </a>
+                </div>
+                <div class="relatedproduct-info">
+                    <h3 class="related-product-title">
+                        <a [routerLink]="['/', product.slug]" title="{{product.name}}">{{product.name}}</a>
+                    </h3>
+                </div>
+            </div>
+        </ng-template>
+    </ng-container>
+      
+    <!-- <ng-template carouselSlide [width]="setWidth">
+        <div class="relatedproduct-block">
+            <div class="relatedproduct-thumb">
+                <a href="">
+                    <img src="assets/images/products/mini-ortho-c-arm/Orthoscan-TAU-2020-1.jpg" />
+                </a>
+            </div>
+            <div class="relatedproduct-info">
+                <h3 class="related-product-title">
+                    <a href="">Orthoscan TAU 2020</a>
+                </h3>
+            </div>
+        </div>
+    </ng-template>   -->
+   <!-- <ng-template carouselSlide [width]="setWidth">
+        <div class="relatedproduct-block">
+            <div class="relatedproduct-thumb">
+                <a href="">
+                    <img src="assets/images/products/mini-ortho-c-arm/Orthoscan-TAU-1515-1.jpg" />
+                </a>
+            </div>
+            <div class="relatedproduct-info">
+                <h3 class="related-product-title">
+                    <a href="">Orthoscan TAU 1515</a>
+                </h3>
+            </div>
+        </div>
+    </ng-template>  
+     <ng-template carouselSlide [width]="setWidth">
+        <div class="relatedproduct-block">
+            <div class="relatedproduct-thumb">
+                <a href="">
+                    <img src="assets/images/products/mini-ortho-c-arm/Orthoscan-TAU-1515-1.jpg" />
+                </a>
+            </div>
+            <div class="relatedproduct-info">
+                <h3 class="related-product-title">
+                    <a href="">Orthoscan TAU 1515</a>
+                </h3>
+            </div>
+        </div>
+    </ng-template>  
+    <ng-template carouselSlide [width]="setWidth">
+        <div class="relatedproduct-block">
+            <div class="relatedproduct-thumb">
+                <a href=""> 
+                    <img src="assets/images/products/mini-ortho-c-arm/Orthoscan-TAU-1515-1.jpg" />
+                </a>
+            </div>
+            <div class="relatedproduct-info">
+                <h3 class="related-product-title">
+                    <a href="">Orthoscan TAU 1515</a>
+                </h3>
+            </div>
+        </div>
+    </ng-template> -->
+</owl-carousel-o>

@@ -1,0 +1,45 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs detail-tab">
+    <li [ngbNavItem]="1">
+        <button ngbNavLink>Product Info</button>
+        <ng-template ngbNavContent>
+            <!-- <h3>Technical Specifications</h3> -->
+            <div [innerHTML]="product.description" *ngIf="product.description"></div>
+            <div [innerHTML]="product.specification" *ngIf="product.specification" class="mt-3"></div>
+            
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="2" *ngIf="product.vid_sec_type == 1">
+        <button ngbNavLink>Product Video</button>
+        <ng-template ngbNavContent>
+            <youtube-player
+            #player
+            [videoId]="videoId"
+            [width]="360"
+            [height]="360"
+            (ready)="onReady($event)"
+            (stateChange)="onStateChange($event)"
+            *ngIf="isBrowser && enabledVideo"></youtube-player>
+           
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="2" *ngIf="product.vid_sec_type == 2">
+        <button ngbNavLink>Product Images</button>
+        <ng-template ngbNavContent>
+            <div class="grid-gallery">
+                <div class="grid-item" *ngFor="let item of items; let i = index" lightbox>
+                    <div class="gallery-detail-block">
+                        <div class="gallery-detail-img-wrap">
+                            <img [src]="item?.data?.thumb" (click)="lightbox.open(i, 'lightbox', {panelClass: 'fullscreen'})" class="gd-image"/>
+                            <!-- <div class="gallery-detail-overlay">
+                            <i class="fa fa-search-plus"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        
+    </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2 detail-tab-content"></div>

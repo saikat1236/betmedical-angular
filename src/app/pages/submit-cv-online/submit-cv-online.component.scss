@@ -1,0 +1,71 @@
+::ng-deep {
+    app-breadcrumb {
+        .breadcrumb_wrap {
+            padding: 42px 0!important;
+        }
+        
+    }
+}
+.submit-cv-section {
+    .submit-cv-form-wrapper {
+        label {
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            height: 50px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-bottom: 15px;
+        }
+        textarea {
+            height: 110px;
+        }
+        input[type="file"] {
+            height: auto;
+            border: none;
+            border-radius: 0px;
+            padding: 0;
+        }
+        input[type="submit"] {
+            width: auto;
+            height: auto;
+            padding: 10px 40px;
+            margin-bottom: 0px;
+            text-transform: uppercase;
+            border: 1px solid #3eb2b1;
+            background: #3eb2b1;
+            color: #fff;
+            border-radius: 0;
+            &:hover {
+                background-color: #4e555b;
+                border: 1px solid #4e555b;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+    .submit-cv-section .submit-cv-form-wrapper textarea {
+        height: 85px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .submit-cv-section .section-title, .submit-cv-section h2.main-title {
+        margin-bottom: 10px;
+    }
+    .submit-cv-section .submit-cv-img-wrapper {
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 575px) {  
+    .submit-cv-section .submit-cv-img-wrapper {
+        margin-top: 30px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .submit-cv-img-wrapper {
+        text-align: center;
+    }
+}

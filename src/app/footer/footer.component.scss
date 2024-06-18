@@ -1,0 +1,39 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+:host {
+    display: contents;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 158px;
+  }
+  .contact-title {
+    color: var(--Dark, #0a142f);
+    font: 600 20px 'Lato', sans-serif;
+    margin: 0;
+  }
+  .contact-divider {
+    width: 20%;
+    height: 2px;
+    background-color: #3eb2b1;
+    border-radius: 2px;
+    // margin-top: 2px;
+    margin-bottom: 5px;
+    // padding-bottom: 5px;
+  }
+  .contact-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 17px;
+  }
+  .contact-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    object-position: center;
+  }

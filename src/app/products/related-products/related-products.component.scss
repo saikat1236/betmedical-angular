@@ -1,0 +1,114 @@
+::ng-deep {
+    .owl-carousel {
+        .owl-stage{
+            display: flex;
+            .owl-item{
+                flex: 0 0 auto;
+                @media (max-width: 480px){
+                    flex: 1 1 auto;
+                    //width: auto!important;
+                }
+            }
+        }
+        
+    }
+    .related-product {
+        .owl-theme {
+            .owl-nav {
+                margin-top:0;
+                [class*=owl-] {
+                    position: absolute;
+                    top: 40%;
+                    padding: 0;
+                    background: rgba(0, 0, 0, 0);
+                    color: rgba(0, 0, 0, 0.3);
+                    font-size: 30px;
+                    &:hover {
+                        background: rgba(0,0,0,0);
+                        color: rgba(0,0,0,0.8);
+                    }
+                }
+                .owl-prev {
+                    left: -30px;
+                }
+                .owl-next {
+                    right: -30px;
+                }
+            }
+        }
+    }
+}
+.relatedproduct-block {
+    background: transparent; /*fff*/
+    padding: 0px;
+    /*box-shadow: 0px 1px 4px #ccc;
+    border-top-right-radius: 10px;
+    border: 1px solid #ccc;*/
+    text-align: center;
+    .relatedproduct-thumb {
+        position: relative;
+        overflow: hidden;
+        img {
+            height: auto;
+            max-width: 100%;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+    } 
+    .relatedproduct-info {
+        background: #4e555b;
+        padding: 10px 5px;
+        h3 {
+            margin: 0px 0 0;
+            color: #fff; 
+            a {
+                color: #fff; 
+                font-size: 18px;
+                display: block;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &:hover {
+        .relatedproduct-thumb { 
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) { 
+    ::ng-deep {
+        .related-product {
+            .owl-theme {
+                .owl-nav {
+                    .owl-prev {
+                        left: 0px;
+                    }
+                    .owl-next {
+                        right: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 575px) { 
+    ::ng-deep {
+        .related-product {
+            .owl-theme {
+                .owl-nav {
+                    .owl-prev {
+                        left: 0px;
+                    }
+                    .owl-next {
+                        right: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

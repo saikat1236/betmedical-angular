@@ -1,0 +1,109 @@
+<!--Product Detail Start-->
+<section class="product-detail pad-tb">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="detail-gallery">
+                    <app-product-gallery [product]="product"></app-product-gallery>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="detail-info">
+                    <h1>{{product.name}}</h1>
+                    <div class="product-brand">
+                        <img [src]="product.product_logo" class="img-fluid" />
+                    </div>
+                    <div class="short-description" [innerHTML]="product.short_desc">
+                    </div>
+                    <div class="product_meta">
+                        <div class="posted_in">
+                            <label>Category:</label>
+                            <ng-container *ngFor="let category of product.categories">
+                                <div class="meta-item-list" ><a [routerLink]="['/category', category.slug]" rel="tag">{{ category.name }}</a></div>
+                            </ng-container>
+                            
+                        </div>
+                    </div>
+                    <div class="product_enquiry">
+                        <button class="" (click)="openVerticallyCentered(content)">Send an Enquiry</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    
+<!--Product Detail End-->
+            
+<!--product detail tabs Start-->
+<section class="detail-tabs">
+    <div class="container">
+        <app-product-detail-tab [product]="product"></app-product-detail-tab>
+    </div>
+</section>
+<!--product detail tabs End-->
+
+<!--Related Products Start-->
+<section class="related-product pad-tb" *ngIf="(relatedProduct$ | async); let relatedProduct$">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12"> 
+                <div class="section-title text-center">
+                    <h2 class="main-title">Related Products</h2>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12"> 
+                <app-related-products [products]="relatedProduct$"></app-related-products>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Related Products End-->
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Enquiry about {{product.name}}</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <p>Please let us know your details. So that we can be able send our business manager with more information:</p>
+        <form [formGroup]="enquiryForm" (ngSubmit)="onEnquirySubmit()">
+            <input type="hidden" formControlName="product" [value]="product.name">
+            <div class="form-group">
+                <label>Your Name <span class="required">*</span></label>
+                <input type="text" formControlName="name" id="txtName" /> 
+                <span class="error invalid-feedback"
+                *ngIf="submitted && !enquiryForm.get('name').valid && enquiryForm.get('name').errors['required']">Please
+                enter your name</span> 
+                
+            </div>
+            <div class="form-group">
+                <label>Your Email Id <span class="required">*</span></label>
+                <input type="email" formControlName="email" id="txtEmail" /> 
+                <span class="error invalid-feedback"
+                *ngIf="submitted && !enquiryForm.get('email').valid && enquiryForm.get('email').errors['required']">Please
+                enter your email</span>
+            </div>
+            <div class="form-group">
+                <label>Your Phone Number <span class="required">*</span></label>
+                <input type="text" formControlName="phone" id="txtPhone" />  
+                <span class="error invalid-feedback"
+                *ngIf="submitted && !enquiryForm.get('phone').valid && enquiryForm.get('phone').errors['required']">Please
+                enter your phone number</span>
+            </div>
+            <div class="form-group">
+                <label>Your Message <span class="required">*</span></label>
+                <textarea formControlName="comments" id="txtComments"></textarea> 
+                <span class="error invalid-feedback"
+                *ngIf="submitted && !enquiryForm.get('comments').valid && enquiryForm.get('comments').errors['required']">Please
+                enter your message</span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send"/> 
+            </div>
+            <app-alert class="mt-4"></app-alert>
+        </form>
+    </div>
+    <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div> -->
+</ng-template>
