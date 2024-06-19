@@ -1,3 +1,14 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
 .portfolio-container {
     background-color: #fff;
     display: flex;
@@ -19,8 +30,8 @@
   }
   .portfolio-content {
     display: flex;
-    gap: 20px;
-    padding: 0 20px;
+    gap: 30px;
+    // padding: 0 20px;
     flex-wrap: wrap;
     margin-top: 20px;
   }
@@ -59,7 +70,7 @@
   .portfolio-description {
     color: #000;
     margin-top: 4px;
-    font: 400 14px/17px 'Lato', sans-serif;
+    font: 400 12px/17px 'Lato', sans-serif;
   }
   .portfolio-link {
     display: inline-block;
@@ -110,11 +121,38 @@
     }
   }
 
-@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    border: 1px solid rgba(62, 178, 177, 1);
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    background-color: #fff;
+    gap: 8px;
+  }
+
+  .card-image {
+    width: 30px;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1;
+  }
+
+  .card-button {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .card-button:focus {
+    outline: 2px solid #000;
+    outline-offset: 4px;
+  }
