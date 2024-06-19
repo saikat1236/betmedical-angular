@@ -8,9 +8,9 @@
                         <!-- <button class="navbar-toggler" type="button" aria-controls="navbarContent" [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" (click)="collapsed = !collapsed">
                           <span class="navbar-toggler-icon"></span>
                         </button> -->
-                        <li><a href="mailto:general@betmedical.com"><i class="fa fa-envelope"></i>general@betmedical.com</a></li>
-                        <li class="vr" style="color: black;"></li>
-                        <li><a href="tel:+91 4428344639"><i class="fa fa-phone-alt"></i>+91-44-28344639</a></li>
+                        <li><a href="mailto:general@betmedical.com" style="font: 300 15px/10px 'Lato', sans-serif;"><i class="fa fa-envelope"></i>General@betmedical.com</a></li>
+                        <li class="vr"></li>
+                        <li><a href="tel:+91 4428344639" style="font: 300 15px/10px 'Lato', sans-serif;"><i class="fa fa-phone-alt"></i>+91-44-28344639</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,11 +37,11 @@
             </div> -->
         <!-- </div>/\ -->
     
-        <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+        <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent" style="font: 200 17px/10px 'SegoiUI', sans-serif;">
      
-                <img src="assets/logo@2x.png" alt="" class="logo img-fluid" style="height: 70px;">
+            <img src="assets/logo@2x.png" alt="" class="logo img-fluid" style="height: 70px;">
 
-            <ul class="navbar-nav ms-auto" style="margin-left: 150px;">
+            <ul class="navbar-nav ms-auto" style="margin-left:200px;">
                 <li class="d-inline d-lg-none">
                     <button data-toggle="collapse" data-target="#navbarContent" class="close float-right" (click)="collapsed = !collapsed">&times;</button>
                 </li>
@@ -179,16 +179,18 @@
                 </li>
 
                 <li class="nav-item">
+                    <a href="//admin.betmedical.com" target="_blank" class="nav-link">
+                        Library
+                    </a>
+                </li>
+
+                <li class="nav-item">
                     <a routerLink="/contact-us" class="nav-link" (click)="collapsed = !collapsed">
                         Contact Us
                     </a>
                 </li>
                 
-                <li class="nav-item">
-                    <a href="//admin.betmedical.com" target="_blank" class="nav-link">
-                        Library
-                    </a>
-                </li>
+
             
             </ul>
         </div>

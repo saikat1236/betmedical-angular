@@ -14,6 +14,11 @@
         
     }
 }
+@media (min-width: 1440px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1300px;
+    }
+}
 .about-section {
     .about-content {
         p {
@@ -270,6 +275,10 @@
     .animate1 {
         width: 80px;
     }
+    .about-us{
+
+    }
+
 }
 .global-partners {
     background: #fff;
@@ -478,3 +487,4 @@
         max-width: 62%;
     }
 }
+

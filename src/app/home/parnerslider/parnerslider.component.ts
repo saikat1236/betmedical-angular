@@ -11,11 +11,12 @@ export class ParnersliderComponent {
     loop: true,
     autoplay: true,
     autoplaySpeed:500,
+    autoplayTimeout:500,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
     dots: false,
-    navSpeed: 100,
+    // navSpeed: 100,
     // navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
     // nav: true,
     margin: 10,
@@ -31,6 +32,9 @@ export class ParnersliderComponent {
       },
       940: {
         items: 4
+      },
+      1240:{
+        items: 5
       }
     },
   }

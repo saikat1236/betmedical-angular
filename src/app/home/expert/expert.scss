@@ -15,14 +15,15 @@
   .content-wrapper {
     display: flex;
     // padding: 80px 0;
+    max-width: 1400px;
     flex-direction: column;
   }
   .content-container {
     border-radius: 24px;
-    background-color: rgba(62, 178, 177, 0.1);
+    background-color: rgba(62, 178, 177,0.15);
     margin-top: 98px;
     width: 100%;
-    padding: 0 65px 20px;
+    padding: 20px 40px 20px 40px;
   }
   @media (max-width: 991px) {
     .content-container {
@@ -33,7 +34,7 @@
   }
   .text-media-container {
     display: flex;
-    gap: 20px;
+    gap: 100px;
   }
   @media (max-width: 991px) {
     .text-media-container {
@@ -45,7 +46,8 @@
   .text-content {
     display: flex;
     flex-direction: column;
-    width: 64%;
+    width: 50%;
+    // gap: 60px;
   }
   @media (max-width: 991px) {
     .text-content {
@@ -63,7 +65,7 @@
   }
   .title {
     color: #000;
-    font: 32px/1 'SF Pro Display', -apple-system, 'Roboto', 'Helvetica', sans-serif;
+    font: 32px/1 'SF Pro Display', sans-serif;
     font-weight: 600;
   }
   @media (max-width: 991px) {
@@ -77,7 +79,7 @@
   .description {
     color: #5a5a5a;
     margin-top: 24px;
-    font: 400 18px/23px Lato, sans-serif;
+    // font: 400 18px/23px Lato, sans-serif;
   }
   @media (max-width: 991px) {
     .description {
@@ -90,8 +92,8 @@
     border-radius: 8px;
     background-color: #3eb2b1;
     color: #fff;
-    padding: 18px 25px;
-    font: 20px/130% Roboto, sans-serif;
+    padding: 20px 30px;
+    font: 500 20px/130% 'Roboto', sans-serif;
     margin-top: 24px;
     text-decoration: none;
   }
@@ -112,10 +114,10 @@
     }
   }
   .image {
-    aspect-ratio: 0.84;
+    aspect-ratio: 0.9;
     object-fit: cover;
     width: 100%;
-    margin-top: -98px;
+    margin-top: -110px;
     flex-grow: 1;
   }
   @media (max-width: 991px) {
