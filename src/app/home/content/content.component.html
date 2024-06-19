@@ -57,13 +57,13 @@
 </section> -->
 
 
-<section class="flex flex-col justify-center items-center px-20 py-10 bg-opacity-70 max-md:px-5"> 
+<!-- <section class="flex flex-col justify-center items-center px-20 py-10 bg-opacity-70 max-md:px-5"> 
 
   <h1 class="mt-2 text-4xl font-bold leading-10 text-center text-black max-md:max-w-full">
     We provide the following Medical Portfolios
   </h1> 
   <div class="gap-10 mt-10" style="width: 90%;">
-    <!-- <div class="flex gap-5 max-md:flex-col max-md:gap-0 container" style="width: 90%;"> -->
+
     <section class="portfolio-content">
       <article class="portfolio-item">
         <figure class="image-wrapper">
@@ -129,12 +129,58 @@
       />
       <button class="card-button" tabindex="0">Load more</button>
     </article>
-    <!-- <button class="justify-center px-8 py-3 mt-11 text-base font-medium leading-5 text-black bg-white rounded-md border border-teal-400 border-solid max-md:px-5 max-md:mt-10" tabindex="0">
-      See All
-    </button>  -->
+</section> -->
+
+
+<section class="flex flex-col justify-center items-center px-20 py-10 bg-opacity-70 max-md:px-5"> 
+  <h1 class="mt-2 text-4xl font-bold leading-10 text-center text-black max-md:max-w-full">
+    We provide the following Medical Portfolios
+  </h1> 
+
+  <div class="gap-10 mt-10" style="width: 90%;">
+    <section class="portfolio-content">
+      <article *ngFor="let item of visibleItems.slice(0, 6)" class="portfolio-item">
+        <figure class="image-wrapper">
+          <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
+        </figure>
+        <h2 class="portfolio-title">{{ item.title }}</h2>
+        <p class="portfolio-description" style="font: 'lato';height: 4rem;">{{ item.description }}</p>
+        <a href="#" class="portfolio-link" tabindex="0">See All</a>
+      </article>
+    </section>
+    <section class="portfolio-content" *ngIf="showAll">
+      <article *ngFor="let item of visibleItems.slice(6, 9)" class="portfolio-item">
+        <figure class="image-wrapper">
+          <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
+        </figure>
+        <h2 class="portfolio-title">{{ item.title }}</h2>
+        <p class="portfolio-description" style="height: 4rem;">{{ item.description }}</p>
+        <a href="#" class="portfolio-link" tabindex="0">See All</a>
+      </article>
+    </section>
+  </div>
+
+  <article class="card flex-row mt-5">
+    <img 
+      loading="lazy"
+      [src]="showAll ? 'https://cdn.builder.io/api/v1/image/assets/TEMP/de0fff475cba2063306d4933937a5a2cf06b2cc5a8d06650e2a7a0051ad2b200?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&' : 'https://cdn.builder.io/api/v1/image/assets/TEMP/4d6f03407e605a258de11f39907e66442bf031cefe30919a3fca06eacd9ee2bd?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&'" 
+      alt="Description of image" 
+      class="card-image" 
+      style="height: 20px;width: 20px;"
+    />
+    <button (click)="toggleShow()" class="card-button" tabindex="0">
+      <!-- <i class="fa-solid fa-arrow-down"></i> -->
+      {{ showAll ? 'Show Less' : 'Load More' }}
+    </button>
+  </article>
+  
+
+  <!-- <article class="card flex-row mt-5">
+    <button (click)="toggleShow()" class="card-button" tabindex="0">
+      {{ showAll ? 'Show Less' : 'Load More' }}
+    </button>
+  </article> -->
 </section>
-
-
 
 
 
