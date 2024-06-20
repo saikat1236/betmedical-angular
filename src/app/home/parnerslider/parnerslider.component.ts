@@ -10,8 +10,8 @@ export class ParnersliderComponent {
   partnersliderOptions: OwlOptions = {
     loop: true,
     autoplay: true,
-    autoplaySpeed:500,
-    autoplayTimeout:500,
+    autoplaySpeed:50,
+    // autoplayTimeout:500,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,

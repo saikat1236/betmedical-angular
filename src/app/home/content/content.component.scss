@@ -156,3 +156,16 @@
     outline: 2px solid #000;
     outline-offset: 4px;
   }
+
+  .image-wrapper {
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .image-wrapper img {
+    transition: transform 0.3s ease;
+  }
+  
+  .image-wrapper:hover img {
+    transform: scale(1.1);
+  }

@@ -145,7 +145,7 @@
         </figure>
         <h2 class="portfolio-title">{{ item.title }}</h2>
         <p class="portfolio-description" style="font: 'lato';height: 4rem;">{{ item.description }}</p>
-        <a href="#" class="portfolio-link" tabindex="0">See All</a>
+        <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
       </article>
     </section>
     <section class="portfolio-content" *ngIf="showAll">
