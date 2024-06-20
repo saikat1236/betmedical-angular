@@ -6,3 +6,20 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+.portfolio-content {
+    display: flex;
+    gap: 30px;
+    // padding: 0 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .portfolio-container,
+    .portfolio-content,
+    .portfolio-item,
+    .portfolio-link,
+    .load-more {
+      width: 100%;
+    }
+  }
