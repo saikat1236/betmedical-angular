@@ -1,8 +1,7 @@
-// @import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400&display=swap");
-// @import url("https://fonts.googleapis.com/css2?family='Lato':wght@400;500;600;700&display=swap");
-// @import url("https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@700&display=swap");
-// @import url("https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@500;600;700&display=swap");
-// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family='Lato':wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@500;600;700&display=swap");
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -20,7 +19,7 @@
   }
   .portfolio-header h1 {
     color: #000;
-    font: 500 20px/130.2% 'SF Pro Display', -apple-system, 'Roboto', 'Helvetica', sans-serif;
+    font: 500 20px/130.2% 'SF Pro Display', sans-serif;
   }
   @media (max-width: 991px) {
     .portfolio-header h1 {
@@ -65,7 +64,7 @@
   .portfolio-title {
     color: #000;
     margin-top: 16px;
-    font: 500 20px/130.2% 'SF Pro Display', -apple-system, 'Roboto', 'Helvetica', sans-serif;
+    font: 500 20px/130.2% 'SF Pro Display', sans-serif;
   }
   .portfolio-description {
     color: #000;

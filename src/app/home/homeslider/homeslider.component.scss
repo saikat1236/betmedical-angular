@@ -28,7 +28,7 @@
   .title {
     position: relative;
     // margin-top: 150px;
-    font: 700 44px/59% "SF Pro Display", -apple-system, Roboto, Helvetica, sans-serif;
+    font: 700 44px/59% "SF Pro Display", sans-serif;
     color: #fff;
   }
   @media (max-width: 991px) {
@@ -37,7 +37,7 @@
       margin-top: 40px;
       font-size:xx-large;
       text-align: center;
-      font: 400 22px/32px "SF Pro Display", -apple-system, Roboto, Helvetica, sans-serif;
+      font: 400 22px/32px "SF Pro Display", sans-serif;
       font-weight: bold;
     }
   }

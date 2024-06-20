@@ -133,7 +133,7 @@
 
 
 <section class="flex flex-col justify-center items-center px-20 py-10 bg-opacity-70 max-md:px-5"> 
-  <h1 class="mt-2 text-4xl font-bold leading-10 text-center text-black max-md:max-w-full">
+  <h1 class="mt-5 portfolio-header leading-10 text-center max-md:max-w-full" style="font: 36px/45% 'SF Pro Display', sans-serif;color: black; font-weight: bold;">
     We provide the following Medical Portfolios
   </h1> 
 
@@ -144,7 +144,7 @@
           <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
         </figure>
         <h2 class="portfolio-title">{{ item.title }}</h2>
-        <p class="portfolio-description" style="font: 'lato';height: 4rem;">{{ item.description }}</p>
+        <p class="portfolio-description" style="height: 4rem;">{{ item.description }}</p>
         <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
       </article>
     </section>
@@ -154,8 +154,8 @@
           <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
         </figure>
         <h2 class="portfolio-title">{{ item.title }}</h2>
-        <p class="portfolio-description" style="height: 3rem;">{{ item.description }}</p>
-        <a href="#" class="portfolio-link" tabindex="0">See All</a>
+        <p class="portfolio-description" style="height: 4rem;">{{ item.description }}</p>
+        <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
       </article>
     </section>
   </div>
