@@ -43,21 +43,21 @@
     margin-bottom: 4px;
     display: flex;
     align-items: center;
-    font: 320 16px/20px Lato, sans-serif;
+    font: 320 15px/20px 'Lato', sans-serif;
     color: #000000;
   }
   
   .contact-info .label {
-    flex: 0 0 auto;
-    min-width: 80px; /* Adjust this width to fit your longest label */
+    display: inline-block;
+    width: 60px; /* Fixed width for alignment, adjust as necessary */
   }
   
   .contact-info .colon {
-    flex: 0 0 auto;
-    margin: 0 8px; /* Adjust spacing between label and value */
+    margin: 0 10px; /* Space around the colon */
   }
   
   .contact-info .value {
-    flex: 1 1 auto;
+    flex: 1;
   }
+  
   
