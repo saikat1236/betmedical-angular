@@ -488,3 +488,16 @@
     }
 }
 
+    /* Base styling */
+    .responsive-container {
+        width: 90%;
+        margin: 0 auto;
+      }
+  
+      /* Media query for small screens (mobile) */
+      @media (max-width: 768px) {
+        .responsive-container {
+          width: 100%;
+        }
+      }
+    
