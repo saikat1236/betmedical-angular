@@ -6,7 +6,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
+// style="color: #000;font-family: 24px/130% Lato, sans-serif;"
 
 .portfolio-container {
     background-color: #fff;
@@ -16,10 +16,11 @@
   .portfolio-header {
     text-align: center;
     margin: 16px 0;
+    font-family: 24px 'Lato', sans-serif;
   }
   .portfolio-header h1 {
     color: #000;
-    font: 500 20px/130.2% 'SF Pro Display', sans-serif;
+    font: 24px 'Lato', sans-serif;
   }
   @media (max-width: 991px) {
     .portfolio-header h1 {

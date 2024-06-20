@@ -22,7 +22,7 @@ export class ParnersliderComponent {
     margin: 10,
     responsive: {
       0: {
-        items: 1
+        items: 3
       },
       400: {
         items: 3
