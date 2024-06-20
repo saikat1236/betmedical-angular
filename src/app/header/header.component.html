@@ -59,25 +59,25 @@
                     <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button" (mouseenter)="showDrop(drop)" (mouseleave)="closeDrop($event, drop);" style="font: 300 15px/10px 'SegoiUI', sans-serif;"><!-- -->
                         Products
                     </a>
-                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop)"> <!---->
+                    <!-- <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop)">
                         <ng-container *ngFor="let category of categories; let i=index;">
                             <li ngbDropdown class="sub-dropdown" *ngIf="!category.child.length">
-                                <a ngbDropdownItem class="nav-link" tabindex="0" role="button" [routerLink]="['/category', category.slug]" (click)="collapsed = !collapsed"><!--(click)="collapsed = !collapsed"-->
+                                <a ngbDropdownItem class="nav-link" tabindex="0" role="button" [routerLink]="['/category', category.slug]" (click)="collapsed = !collapsed">
                                     {{ category.name }}
                                 </a>
                             </li>
                             <li ngbDropdown class="sub-dropdown" *ngIf="category.child.length">
-                                <a ngbDropdownToggle  class="dropdown-submenu-title" >{{ category.name }}</a><!-- [routerLink]="['/category', category.slug]" (click)="$event.preventDefault()"  (click)="collapsed = !collapsed"-->
+                                <a ngbDropdownToggle  class="dropdown-submenu-title" >{{ category.name }}</a>
                                 <ul class="dropdown-submenu" ngbDropdownMenu>
                                     <ng-container *ngFor="let second of category.child; let i=index;">
                                         <li *ngIf="!second.child">
-                                            <a ngbDropdownItem [routerLink]="['/category', second.slug]" (click)="collapsed = !collapsed">{{ second.name }}</a><!--(click)="$event.preventDefault()"  (click)="collapsed = !collapsed"-->
+                                            <a ngbDropdownItem [routerLink]="['/category', second.slug]" (click)="collapsed = !collapsed">{{ second.name }}</a>
                                         </li>
                                         <li *ngIf="second.child" ngbDropdown class="fl-sub-dropdown">
-                                            <a ngbDropdownToggle class="dropdown-submenu-title" >{{ second.name }}</a><!-- [routerLink]="['/category', second.slug]" (click)="collapsed = !collapsed"-->
+                                            <a ngbDropdownToggle class="dropdown-submenu-title" >{{ second.name }}</a>
                                             <ul class="dropdown-sub-submenu" ngbDropdownMenu>
                                                 <ng-container *ngFor="let third of second.child; let i=index;">
-                                                    <li><a ngbDropdownItem [routerLink]="['/category', third.slug]" (click)="collapsed = !collapsed">{{third.name}}</a></li><!---(click)="$event.preventDefault()"  (click)="collapsed = !collapsed"-->
+                                                    <li><a ngbDropdownItem [routerLink]="['/category', third.slug]" (click)="collapsed = !collapsed">{{third.name}}</a></li>
                                                 </ng-container>
                                             </ul>
                                         </li>
@@ -85,7 +85,7 @@
                                 </ul>
                             </li>
                         </ng-container>
-                    </ul>
+                    </ul> -->
                 </li>
     
                 <!-- <li class="nav-item" ngbDropdown>
@@ -162,20 +162,20 @@
                     <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button" (mouseenter)="showDrop(drop1);" (mouseleave)="closeDrop($event, drop1);" style="font: 300 15px/10px 'SegoiUI', sans-serif;">
                         Career
                     </a>
-                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop1);">
-                        <li><a ngbDropdownItem routerLink="/work-with-bet-medical" (click)="collapsed = !collapsed">Work with Bet Medical</a></li><!--(click)="$event.preventDefault()"-->
-                        <li><a ngbDropdownItem routerLink="/submit-cv-online" (click)="collapsed = !collapsed">Submit CV Online</a></li><!--(click)="$event.preventDefault()"-->
-                    </ul>
+                    <!-- <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop1);">
+                        <li><a ngbDropdownItem routerLink="/work-with-bet-medical" (click)="collapsed = !collapsed">Work with Bet Medical</a></li>
+                        <li><a ngbDropdownItem routerLink="/submit-cv-online" (click)="collapsed = !collapsed">Submit CV Online</a></li>
+                    </ul> -->
                 </li>
 
                 <li class="nav-item" ngbDropdown #drop2="ngbDropdown">
                     <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown4" role="button" (mouseenter)="showDrop(drop2);" (mouseleave)="closeDrop($event, drop2);" style="font: 300 15px/10px 'SegoiUI', sans-serif;">
                         Gallery
                     </a>
-                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop2);">
-                        <li><a ngbDropdownItem routerLink="/events" (click)="collapsed = !collapsed">Events</a></li><!--(click)="$event.preventDefault()"-->
-                        <li><a ngbDropdownItem routerLink="/conferences" (click)="collapsed = !collapsed">Conferences</a></li><!--(click)="$event.preventDefault()"-->
-                    </ul>
+                    <!-- <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop2);">
+                        <li><a ngbDropdownItem routerLink="/events" (click)="collapsed = !collapsed">Events</a></li>
+                        <li><a ngbDropdownItem routerLink="/conferences" (click)="collapsed = !collapsed">Conferences</a></li>
+                    </ul> -->
                 </li>
 
                 <li class="nav-item">
