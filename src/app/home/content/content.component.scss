@@ -165,3 +165,9 @@
   .image-wrapper:hover img {
     transform: scale(1.1);
   }
+  @media (min-width: 500px) {
+  .pad {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}

@@ -127,3 +127,10 @@
       margin-top: 40px;
     }
   }
+
+  @media (min-width: 500px) {
+    .pad {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  }
