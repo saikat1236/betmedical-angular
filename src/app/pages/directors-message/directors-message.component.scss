@@ -1,3 +1,16 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@500;600;700&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+
+
 ::ng-deep {
     app-breadcrumb {
         .breadcrumb_wrap {
@@ -11,7 +24,7 @@
         h2 {
             position: relative;
             display: block;
-            color: #fff;
+            color: #000;
             margin-bottom: 0;
             padding: 5px 0 8px;
             font-size: 30px;
@@ -27,7 +40,7 @@
                 left: -61px;
                 width: 112%;
                 height: 100%;
-                background: #4e555b;
+                // background: #4e555b;
                 z-index: 1;
                 border-top-right-radius: 30px;
                 border-bottom-right-radius: 30px;
@@ -37,10 +50,10 @@
                 position: absolute;
                 left: -61px;
                 bottom: -16px;
-                border-top: 8px solid #363d42;
-                border-bottom: 8px solid rgba(0, 0, 0, 0);
-                border-right: 13px solid #363d42;
-                border-left: 13px solid rgba(0, 0, 0, 0);
+                // border-top: 8px solid #363d42;
+                // border-bottom: 8px solid rgba(0, 0, 0, 0);
+                // border-right: 13px solid #363d42;
+                // border-left: 13px solid rgba(0, 0, 0, 0);
                 z-index: 1;
                 display: inline-block;
             }
