@@ -19,6 +19,7 @@
     display: flex;
     // padding: 80px 0;
     max-width: 1400px;
+
     flex-direction: column;
   }
   .content-container {
@@ -49,7 +50,7 @@
   .text-content {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 55%;
     // gap: 60px;
   }
   @media (max-width: 991px) {
@@ -116,7 +117,7 @@
     }
   }
   .image {
-    aspect-ratio: 0.9;
+    // aspect-ratio: 0.9;
     object-fit: cover;
     width: 100%;
     margin-top: -110px;
