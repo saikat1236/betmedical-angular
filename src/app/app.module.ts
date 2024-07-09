@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { HomesliderComponent } from './home/homeslider/homeslider.component';
 import { ProductcategorysliderComponent } from './home/productcategoryslider/productcategoryslider.component';
 import { ParnersliderComponent } from './home/parnerslider/parnerslider.component';
+import { ParnersliderComponent2 } from './home/parnerslider2/parnerslider2.component';
 import { provideClientHydration } from '@angular/platform-browser';
 import { LightboxModule } from 'ng-gallery/lightbox';
 import { GalleryModule } from 'ng-gallery';
@@ -33,6 +34,7 @@ import {Expert} from './home/expert/expert';
     HomesliderComponent,
     ProductcategorysliderComponent,
     ParnersliderComponent,
+    ParnersliderComponent2,
     Content,
     Blog,
     Expert
