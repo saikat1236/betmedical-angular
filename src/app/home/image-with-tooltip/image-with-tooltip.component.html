@@ -1,0 +1,7 @@
+<div class="image-container" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()">
+    <img src="../../assets/Frame 292776.svg" alt="Map" class="map-image">
+    <div *ngIf="tooltip.visible" [ngStyle]="{'top.px': tooltip.y, 'left.px': tooltip.x}" class="tooltip">
+      {{ tooltip.text }}
+    </div>
+  </div>
+  

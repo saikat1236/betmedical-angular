@@ -19,6 +19,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { LightboxModule } from 'ng-gallery/lightbox';
 import { GalleryModule } from 'ng-gallery';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import {ImageWithTooltipComponent} from './home/image-with-tooltip/image-with-tooltip.component';
 import {Content} from './home/content/content.component';
 import {Blog} from './home/blog/blog';
 import {Expert} from './home/expert/expert';
@@ -37,7 +38,8 @@ import {Expert} from './home/expert/expert';
     ParnersliderComponent2,
     Content,
     Blog,
-    Expert
+    Expert,
+    ImageWithTooltipComponent
   ],
   imports: [
     BrowserModule,
