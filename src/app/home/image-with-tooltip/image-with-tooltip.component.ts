@@ -1,47 +1,49 @@
-import { Component } from '@angular/core';
+import { Component,AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-image-with-tooltip',
   templateUrl: './image-with-tooltip.component.html',
   styleUrls: ['./image-with-tooltip.component.scss']
 })
-export class ImageWithTooltipComponent {
-  tooltip = {
-    visible: true,
-    x: 100,
-    y: 100,
-    text: 'Hello'
-  };
 
-  locations = [
-    { x: 100, y: 100, text: 'Location 1' },
-    { x: 200, y: 150, text: 'Location 2' },
-    // Add more locations as needed
-  ];
+export class ImageWithTooltipComponent implements AfterViewInit {
 
-  onMouseMove(event: MouseEvent) {
-    const imageElement = (event.target as HTMLElement).closest('.image-container');
-    if (!imageElement) return;
+  ngAfterViewInit() {
+    // set the image-map width and height to match the img size
+    const imageMap = document.getElementById('image-map');
+    const img = imageMap.querySelector('img');
+    imageMap.style.width = `${img.width}px`;
+    imageMap.style.height = `${img.height}px`;
 
-    const rect = imageElement.getBoundingClientRect();
-    const offsetX = event.clientX - rect.left;
-    const offsetY = event.clientY - rect.top;
+    //tooltip direction
+    let tooltipDirection;
 
-    const location = this.locations.find(loc => 
-      Math.abs(loc.x - offsetX) < 10 && Math.abs(loc.y - offsetY) < 10
-    );
+    const pins = document.querySelectorAll('.pin');
+    pins.forEach(pin => {
+      // set tooltip direction type - up or down
+      if (pin.classList.contains('pin-down')) {
+        tooltipDirection = 'tooltip-down';
+      } else {
+        tooltipDirection = 'tooltip-up';
+      }
 
-    if (location) {
-      this.tooltip.visible = true;
-      this.tooltip.x = offsetX;
-      this.tooltip.y = offsetY;
-      this.tooltip.text = location.text;
-    } else {
-      this.tooltip.visible = false;
-    }
-  }
+      // append the tooltip
+      const tooltipHtml = `
+        <div style='left:${pin.getAttribute('data-xpos')}px;top:${pin.getAttribute('data-ypos')}px' class='${tooltipDirection}'>
+          <div class='tooltip'>${pin.innerHTML}</div>
+        </div>`;
+      imageMap.insertAdjacentHTML('beforeend', tooltipHtml);
+    });
 
-  onMouseLeave() {
-    this.tooltip.visible = false;
+    // show/hide the tooltip
+    const tooltips = document.querySelectorAll('.tooltip-up, .tooltip-down');
+    tooltips.forEach(tooltip => {
+      tooltip.addEventListener('mouseenter', function () {
+        this.querySelector('.tooltip').style.display = 'block';
+      });
+      tooltip.addEventListener('mouseleave', function () {
+        this.querySelector('.tooltip').style.display = 'none';
+      });
+    });
   }
 }
