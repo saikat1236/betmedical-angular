@@ -32,7 +32,7 @@ export class ParnersliderComponent2 {
         items: 4
       },
       940: {
-        items: 4
+        items: 5
       },
       1240:{
         items: 5

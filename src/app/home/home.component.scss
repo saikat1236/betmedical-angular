@@ -520,3 +520,18 @@
         border: none;
         cursor: pointer;
       }
+
+      .container {
+        width: 100%;
+      }
+      
+      /* Full width for row1 */
+      .row1 {
+        width: 100%;
+      }
+      
+      /* 90% width for row2 relative to the container */
+      .row2 {
+        width: 90%;
+        // margin: 0 auto; /* Center align row2 within the container */
+      }
