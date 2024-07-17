@@ -132,7 +132,15 @@
     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
     background-color: #fff;
     gap: 8px;
-  }
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for the hover effect */
+}
+
+.card:hover {
+    color: white;           /* Change text color to white on hover */
+    background-color: rgba(62, 178, 177, 1); /* Change background color to green on hover */
+
+}
+
 
   .card-image {
     width: 30px;
@@ -141,16 +149,27 @@
     aspect-ratio: 1;
   }
 
+.card-image:hover {
+  color: white;           /* Change text color to white on hover */
+  
+}
+
   .card-button {
     font: 'Lato', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
-    color: #000;
+    // color: #000;
     background: none;
     border: none;
     cursor: pointer;
   }
+
+.card-button:hover {
+    color: white;           /* Change text color to white on hover */
+    
+}
+
 
 
   .image-wrapper {
