@@ -31,7 +31,7 @@ export class ParnersliderComponent {
         items: 4
       },
       940: {
-        items: 5
+        items: 6
       },
       1240:{
         items: 5
