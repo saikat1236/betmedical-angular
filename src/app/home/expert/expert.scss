@@ -13,8 +13,8 @@
 
 
 :host {
-    display: contents;
-  }
+  display: contents;
+}
   .content-wrapper {
     display: flex;
     // padding: 80px 0;
@@ -27,7 +27,7 @@
     background-color: rgba(62, 178, 177,0.15);
     margin-top: 98px;
     width: 100%;
-    padding: 20px 40px 20px 40px;
+    padding: 40px 40px 40px 40px;
   }
   @media (max-width: 991px) {
     .content-container {
@@ -110,6 +110,7 @@
     flex-direction: column;
     width: 36%;
     // margin-left: 20px;
+    justify-content: flex-end;
   }
   @media (max-width: 991px) {
     .image-wrapper {
@@ -119,7 +120,7 @@
   .image {
     // aspect-ratio: 0.9;
     object-fit: cover;
-    width: 100%;
+    width: 80%;
     margin-top: -110px;
     flex-grow: 1;
   }
@@ -133,5 +134,93 @@
     .pad {
       padding-left: 6rem;
       padding-right: 6rem;
+    }
+  }
+
+
+
+
+  .video-section1 {
+    padding: 80px 0 0;
+  }
+  
+  .content-wrapper1 {
+    display: flex;
+    border-radius: 24px;
+    background-color: #cef5f5;
+    padding: 0 65px 20px;
+    margin-top: 98px;
+  }
+  
+  .text-content1 {
+    flex: 0 0 64%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .title1 {
+    color: #000;
+    font: 600 32px 'SF Pro Display', sans-serif;
+    margin: 0 0 24px;
+  }
+  
+  .description1 {
+    color: #5a5a5a;
+    font: 400 18px/23px Lato, sans-serif;
+    margin: 0 0 24px;
+  }
+  
+  .cta-button1 {
+    align-self: flex-start;
+    border: none;
+    border-radius: 8px;
+    background-color: #3eb2b1;
+    color: #fff;
+    font: 600 20px/130% Roboto, sans-serif;
+    padding: 18px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover1 {
+    background-color: #35a09f;
+  }
+  
+  .image-wrapper1 {
+    flex: 0 0 36%;
+    margin-left: 20px;
+  }
+  
+  .thumbnail1 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: -98px;
+  }
+  
+  @media (max-width: 991px) {
+    .content-wrapper1 {
+      flex-direction: column;
+      padding: 0 20px;
+      margin-top: 40px;
+    }
+  
+    .text-content1,
+    .image-wrapper1 {
+      flex: 1 0 100%;
+      margin-left: 0;
+    }
+  
+    .text-content1 {
+      margin-top: 40px;
+    }
+  
+    .thumbnail1 {
+      margin-top: 40px;
+    }
+  
+    .cta-button1 {
+      padding: 18px 20px;
     }
   }
