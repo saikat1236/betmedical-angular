@@ -35,14 +35,14 @@ export class Content {
       imgSrc: 'https://cdn.builder.io/api/v1/image/assets/TEMP/e977e2199634e6789b420a7ac5ec413244a9b8bb5af3e246b4db47f7b202698e?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&',
 
       imgAlt: 'Medical Portfolio 4',
-      title: 'Surgical Or Tables',
+      title: 'Surgical OR Tables',
       description: 'High Quality, Reliable, Radiolucent and Innovative Surgical OR Tables From Benq Medical Technology',
       url: 'https://betmedical.com/category/surgical-or-tables'
     },
     {
       imgSrc: '../../../assets/Rectangle 5317.png',
       imgAlt: 'Medical Portfolio 5',
-      title: 'Surgical LED or Lights',
+      title: 'Surgical LED OR Lights',
       description: 'High Efficiency, Superior Optical Performance Surgical LED OR Lights From BenQ Medical Technology Corporation, Taiwan',
       url: 'https://betmedical.com/category/surgical-led-or-lights'
       
