@@ -187,6 +187,30 @@
         <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
       </article>
     </section>
+    <!-- <section class="portfolio-content" *ngIf="showAll">
+      <article *ngFor="let item of visibleItems.slice(9, 10)" class="portfolio-item2">
+        <figure class="image-wrapper">
+          <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
+        </figure>
+        <h2 class="portfolio-title">{{ item.title }}</h2>
+        <p class="portfolio-description" style="height: 3rem;">{{ item.description }}</p>
+        <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
+      </article>
+    </section> -->
+    <section class="portfolio-content" *ngIf="showAll">
+      <div class="grid grid-cols-1 md:grid-cols-3" style="gap: 30px;">
+        <article *ngFor="let item of visibleItems.slice(9, 10)" class="portfolio-item">
+          <figure class="image-wrapper">
+            <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy"/>
+          </figure>
+          <h2 class="portfolio-title">{{ item.title }}</h2>
+          <p class="portfolio-description text-gray-700" style="height: 3rem;">{{ item.description }}</p>
+          <a [href]="item.url" class="portfolio-link text-blue-500" tabindex="0">See All</a>
+        </article>
+      </div>
+    </section>
+    
+    
   </div>
 
   <article class="card flex-row mt-5">
@@ -194,7 +218,7 @@
       loading="lazy"
       [src]="showAll ? 'https://cdn.builder.io/api/v1/image/assets/TEMP/de0fff475cba2063306d4933937a5a2cf06b2cc5a8d06650e2a7a0051ad2b200?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&' : 'https://cdn.builder.io/api/v1/image/assets/TEMP/4d6f03407e605a258de11f39907e66442bf031cefe30919a3fca06eacd9ee2bd?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&'" 
       alt="Description of image" 
-      class="card-image " 
+      class="card-image" 
       style="height: 20px;width: 20px;"
     />
     <button (click)="toggleShow()" class="card-button" tabindex="0">

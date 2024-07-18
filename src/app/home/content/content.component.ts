@@ -59,7 +59,7 @@ export class Content {
 
 
     {
-      imgSrc: '../../../assets/Rectangle 5317 2.png',
+      imgSrc: '../../../assets/Group 1000001908.png',
       imgAlt: 'Medical Portfolio 7',
       title: 'Criticalcare Ventilators',
       description: 'A state-of-the-art piston-type HFO ventilator that brings together over 30 years’ worth of technological achievements MetranCo.,Ltd, Japan',
