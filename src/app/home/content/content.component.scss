@@ -108,6 +108,11 @@
     text-decoration: none;
     cursor: pointer;
   }
+  .load-more:hover{
+    background-color: #3eb2b1;
+    color: #fff;
+    width:110%;
+  }
   .load-more-icon {
     width: 20px;
   }
@@ -138,6 +143,7 @@
 .card:hover {
     color: white;           /* Change text color to white on hover */
     background-color: rgba(62, 178, 177, 1); /* Change background color to green on hover */
+    transform: scale(1.1);
 
 }
 
