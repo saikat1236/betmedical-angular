@@ -290,3 +290,15 @@
     padding-right: 6rem;
   }
 }
+
+/* Define a custom class for the margin */
+.custom-sm-mt-5 img {
+  margin-top: 0;
+}
+
+/* Apply the margin only on small devices (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+  .custom-sm-mt-5 img {
+      margin-top: 2rem; /* Equivalent to mt-5 in Bootstrap */
+  }
+}

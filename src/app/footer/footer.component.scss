@@ -63,4 +63,22 @@
     flex: 1;
   }
   
-  
+  .align-left-on-desktop {
+    align-items: flex-start;
+}
+
+/* Custom CSS for small devices (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+    .align-left-on-desktop {
+        align-items: center;
+        text-align: center; /* Center text content */
+    }
+    .logo-img {
+        // margin: 0 auto; /* Center the image */
+        // align-items:flex-start
+    }
+    .custom-paragraph {
+        text-align: center;
+        width: auto; /* Adjust width to content */
+    }
+}
