@@ -509,6 +509,49 @@
         }
       }
 
+      .missionh1 {
+        font-size: 30px; /* 1.875rem = 30px */
+        line-height: 35px; /* 2.1875rem = 35px */
+        font-family: 'SF Pro Display', sans-serif;
+        font-weight: 700;
+        
+      }
+      .missionm {
+        font-size: 30px; /* 1.875rem = 30px */
+        line-height: 35px; /* 2.1875rem = 35px */
+        font-family: 'SF Pro Display', sans-serif;
+        font-weight: 700;
+      }
+    
+      .missionp {
+        font-size: 18px; /* 1.125rem = 18px */
+        line-height: 20px; /* 1.25rem = 20px */
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+     
+      }
+    
+      @media (max-width: 768px) { /* For screens with width 768px or less */
+        .missionh1  {
+          font-size: 24px; /* 1.5rem = 24px */
+          line-height: 30px; /* 1.875rem = 30px */
+          font-family: 'SF Pro Display', sans-serif;
+          font-weight: 700;
+        }
+        .missionm {
+            font-size: 16px; /* 1.875rem = 30px */
+            line-height: 35px; /* 2.1875rem = 35px */
+            font-family: 'SF Pro Display', sans-serif;
+            font-weight: 700;
+          }
+    
+        .missionp {
+            font-size: 16px; /* 1.125rem = 18px */
+            line-height: 18px; /* 1.25rem = 20px */
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+        }
+      }
 
       .card-button {
         font: 'Lato', sans-serif;

@@ -18,14 +18,28 @@
     text-align: center;
     margin: 16px 0;
   }
-  .portfolio-header h1 {
+  .portfolio-header{
     color: #000;
-    font: 500 36px/130.2% 'SF Pro Display', sans-serif;
+    // font: 36px/120% 'SF Pro Display', sans-serif;
+    font-family: 'SF Pro Display', sans-serif ;
+    font-weight: bold;
+    font-size: 36px;
+    // style="font: 36px/120% 'SF Pro Display', sans-serif;color: black; font-weight: bold;"
   }
   @media (max-width: 991px) {
     .portfolio-header h1 {
       max-width: 100%;
       font-size: 24px;
+    }
+  }
+
+  @media (max-width: 768px) { /* Target screens with a width of 768px or less */
+    .portfolio-header{
+      font-size: 30px; /* Font size for smaller screens */
+      color: #000;
+      // font: 36px/120% 'SF Pro Display', sans-serif;
+      font-family: 'SF Pro Display', sans-serif ;
+      font-weight: bold;
     }
   }
   .portfolio-content {
@@ -75,7 +89,7 @@
   .portfolio-description {
     color: #000;
     margin-top: 4px;
-    font:400 14px/120% 'Lato', sans-serif;
+    font:400 13px/100% 'Lato', sans-serif;
   }
   .portfolio-link {
     display: inline-block;

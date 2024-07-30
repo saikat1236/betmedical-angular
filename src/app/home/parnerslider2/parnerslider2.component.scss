@@ -70,3 +70,15 @@
         }
     }
 }
+.carousel-item {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 100%;            /* Make sure to use full height of the carousel */
+  }
+  
+  .carousel-item img {
+    max-width: 100%;         /* Ensure images are responsive */
+    max-height: 100%;        /* Ensure images fit within their container */
+    object-fit: contain;     /* Maintain aspect ratio */
+  }
