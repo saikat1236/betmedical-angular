@@ -58,7 +58,7 @@
                     <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button" (mouseenter)="showDrop(drop)" (mouseleave)="closeDrop($event, drop);" style="font: 400 16px/26px 'Lato', sans-serif;"><!-- -->
                         Products
                     </a>
-                    <!-- <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop)">
+                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop)">
                         <ng-container *ngFor="let category of categories; let i=index;">
                             <li ngbDropdown class="sub-dropdown" *ngIf="!category.child.length">
                                 <a ngbDropdownItem class="nav-link" tabindex="0" role="button" [routerLink]="['/category', category.slug]" (click)="collapsed = !collapsed">
@@ -84,7 +84,7 @@
                                 </ul>
                             </li>
                         </ng-container>
-                    </ul> -->
+                    </ul>
                 </li>
     
                 <!-- <li class="nav-item" ngbDropdown>
@@ -161,20 +161,20 @@
                     <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button" (mouseenter)="showDrop(drop1);" (mouseleave)="closeDrop($event, drop1);" style="font: 400 16px/26px 'Lato', sans-serif;">
                         Career
                     </a>
-                    <!-- <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop1);">
+                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop1);">
                         <li><a ngbDropdownItem routerLink="/work-with-bet-medical" (click)="collapsed = !collapsed">Work with Bet Medical</a></li>
                         <li><a ngbDropdownItem routerLink="/submit-cv-online" (click)="collapsed = !collapsed">Submit CV Online</a></li>
-                    </ul> -->
+                    </ul>
                 </li>
 
                 <li class="nav-item" ngbDropdown #drop2="ngbDropdown">
                     <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown4" role="button" (mouseenter)="showDrop(drop2);" (mouseleave)="closeDrop($event, drop2);" style="font: 400 16px/26px 'Lato', sans-serif;">
                         Gallery
                     </a>
-                    <!-- <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop2);">
+                    <ul ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu" (mouseleave)="hideDrop(drop2);">
                         <li><a ngbDropdownItem routerLink="/events" (click)="collapsed = !collapsed">Events</a></li>
                         <li><a ngbDropdownItem routerLink="/conferences" (click)="collapsed = !collapsed">Conferences</a></li>
-                    </ul> -->
+                    </ul>
                 </li>
 
                 <li class="nav-item">
