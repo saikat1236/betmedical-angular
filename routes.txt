@@ -7,3 +7,5 @@
 /events
 /conferences
 /contact-us
+/blogs
+/blog/id

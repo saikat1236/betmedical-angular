@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 export class ApiService {
 
   apiURL: string = environment.apiUrl;
+  lapiURL: string = environment.lapiUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -49,5 +50,22 @@ export class ApiService {
       headers.headers = headers.headers.append(options.name, options.value)
     }
     return this.http.put<T>(`${this.apiURL}/${path}`, data, headers);
+  }
+  public l_post<T>(path: string, options = null): Observable<T>{
+    let headers = {
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Headers': '*',
+        'Accept': 'application/json',
+        'Access-Control-Expose-Headers': '*',       
+      }),
+     
+    };
+    if(options){
+      headers.headers = headers.headers.delete('Content-Type', 'application/json');
+      headers.headers = headers.headers.append(options.name, options.value)
+    }
+    return this.http.post<T>(`${this.lapiURL}/${path}`, headers);
   }
 }

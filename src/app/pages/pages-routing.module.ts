@@ -12,6 +12,9 @@ import { EventsDetailsComponent } from './events/events-details/events-details.c
 import { ConferencesDetailsComponent } from './conferences/conferences-details/conferences-details.component';
 import { EventResolver } from '../core/resolver/event.resolver';
 import { conferenceResolver } from '../core/resolver/conference.resolver';
+import { BlogsComponent } from './blogs/blogs.component';
+import { BlogDetailsComponent } from './blogs/blog-details/blog-details.component';
+import { PageNotFound } from './404/PageNotFound.component';
 
 const routes: Routes = [
     { path: 'about', component: AboutComponent, data: { breadcrumb: 'About' } },
@@ -23,7 +26,10 @@ const routes: Routes = [
     { path: 'events', component: EventsComponent, data: { breadcrumb: 'Events' } },
     { path: 'conferences', component: ConferencesComponent, data: { breadcrumb: 'Conferences' } },
     { path: 'events-detail/:id', component: EventsDetailsComponent, resolve:{event: EventResolver},  data: { breadcrumb: (data: any) => `${data.event.name}` } },
-    { path: 'conferences-detail/:id', component: ConferencesDetailsComponent, resolve:{event: conferenceResolver},  data: { breadcrumb: (data: any) => `${data.event.name}` } }
+    { path: 'conferences-detail/:id', component: ConferencesDetailsComponent, resolve:{event: conferenceResolver},  data: { breadcrumb: (data: any) => `${data.event.name}` } },
+    { path: 'blogs', component: BlogsComponent, data: { breadcrumb: 'Blogs' } },
+    { path: 'blog/:id', component: BlogDetailsComponent, data: { breadcrumb: (data: any) => `${data.event.name}` } },
+    { path: '404', component: PageNotFound, data: { breadcrumb: 'PageNotFound' } },
 ];
   
 @NgModule({

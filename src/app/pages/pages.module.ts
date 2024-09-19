@@ -12,6 +12,7 @@ import { ConferencesComponent } from './conferences/conferences.component';
 import { EventsDetailsComponent } from './events/events-details/events-details.component';
 import { ConferencesDetailsComponent } from './conferences/conferences-details/conferences-details.component';
 import { SharedModule } from '../shared/shared.module';
+import { BlogsComponent } from './blogs/blogs.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SharedModule } from '../shared/shared.module';
     EventsComponent,
     ConferencesComponent,
     EventsDetailsComponent,
-    ConferencesDetailsComponent
+    ConferencesDetailsComponent,
+    BlogsComponent
   ],
   imports: [
     CommonModule,

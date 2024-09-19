@@ -305,6 +305,299 @@
     color: #00aeb7;
     font-weight: 600;
 }
+.home-image-mark{
+    position: relative;
+    width:800px;
+    margin:auto;
+    img{
+        width:800px;
+    }
+    .c_marker{
+        position:absolute;
+        img{
+            width:30px;
+            
+                
+                
+            
+        }
+        img:hover + .popup {
+            transition:0.5s;
+            opacity:1;
+            display:block;
+            //height:auto;
+        }
+        .popup{
+            position: absolute;
+            width: 200px;
+            background: #fff;
+            border: 1px solid #000;
+            border-radius: 3px;
+            padding: 15px;
+            z-index: 10;
+            transition:0.5s;
+            opacity:0;
+            display:none;
+            //height:0;
+        }
+        //.popup:hover{
+         //   transition:0.5s;
+         //   opacity:1;
+        //}
+    }
+
+    .marker1{
+        top: 167px;
+        left: 172px;
+        .popup{
+            bottom: 40px;
+            left: -87px
+        }
+    }
+    .marker2{
+        top: 120px;
+        left: 332px;
+        .popup{
+            bottom: 40px;
+            left: -87px
+        }
+    }
+    .marker3{
+        top: 105px;
+        left: 473px;
+        .popup{
+            bottom: 40px;
+            left: -87px
+        }
+    }
+    .marker4{
+        top: 154px;
+        left: 550px;
+        .popup{
+            bottom: 40px;
+            left: -87px
+        }
+    }
+    .marker5{
+        top: 188px;
+        left: 660px;
+        .popup{
+            bottom: 40px;
+            left: -87px
+        }
+    }
+    .marker6{
+        top: 222px;
+        left: 406px;
+        .popup{
+            bottom: 40px;
+            left: -87px
+        }
+    }
+}
+@media only screen and (max-width: 767px){
+    .home-image-mark{
+        width:500px;
+        img{
+            width:500px;
+        }
+        .c_marker{
+            position:absolute;
+            img{
+                width:22px;   
+            }
+            .popup{
+                font-size:12px;
+                padding:10px;
+            }   
+        }
+        .marker1{
+            top: 100px;
+            left: 106px;
+            .popup{
+                bottom: 26px;
+                left: -87px
+            }
+        }
+        .marker2{
+            top: 73px;
+            left: 205px;
+            .popup{
+                bottom: 26px;
+                left: -87px
+            }
+        }
+        .marker3{
+            top: 64px;
+            left: 294px;
+            .popup{
+                bottom: 26px;
+                left: -87px
+            }
+        }
+        .marker4{
+            top: 94px;
+            left: 340px;
+            .popup{
+                bottom: 26px;
+                left: -87px
+            }
+        }
+        .marker5{
+            top: 114px;
+            left: 410px;
+            .popup{
+                bottom: 26px;
+                left: -87px
+            }
+        }
+        .marker6{
+            top: 136px;
+            left: 256px;
+            .popup{
+                bottom: 26px;
+                left: -87px
+            }
+        }
+    }
+
+}
+@media only screen and (max-width: 480px){
+    .home-image-mark{
+        width:350px;
+        img{
+            width:350px;
+        }
+        .c_marker{
+            position:absolute;
+            img{
+                width:18px;   
+            }
+            .popup{
+                font-size:12px;
+                padding:10px;
+                width:150px;
+            }   
+        }
+        .marker1{
+            top: 67px;
+            left: 73px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker2{
+            top: 48px;
+            left: 143px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker3{
+            top: 42px;
+            left: 204px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker4{
+            top: 65px;
+            left: 238px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker5{
+            top: 80px;
+            left: 287px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker6{
+            top: 94px;
+            left: 176px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+    }
+
+}
+@media only screen and (max-width: 420px){
+    .home-image-mark{
+        width:300px;
+        img{
+            width:300px;
+        }
+        .c_marker{
+            position:absolute;
+            img{
+                width:18px;   
+            }
+            .popup{
+                font-size:12px;
+                padding:10px;
+                width:150px;
+            }   
+        }
+        .marker1{
+            top: 58px;
+            left: 62px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker2{
+            top: 40px;
+            left: 122px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker3{
+            top: 36px;
+            left: 174px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker4{
+            top: 52px;
+            left: 203px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker5{
+            top: 67px;
+            left: 244px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker6{
+            top: 78px;
+            left: 149px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+    }
+
+}
 @media only screen and (min-width: 1200px) and (max-width: 1280px) {
     .mission-section .shape-2 {
         right: 0;

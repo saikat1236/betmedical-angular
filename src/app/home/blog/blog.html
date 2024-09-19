@@ -7,70 +7,31 @@
 
     <div class="gap-10 mt-10">
       <!-- <div class="flex gap-5 max-md:flex-col max-md:gap-0 container" style="width: 90%;"> -->
-      <section class="portfolio-content">
-        <article class="shadow-[0px_12px_16px_-4px_rgba(16,_24,_40,_0.08)] flex flex-col px-6 pt-6 pb-8 shrink-0 rounded-xl bg-white portfolio-item">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e907e1d7bfbbaa4b6a61067b36f74ea63000b2302665087a62cd9596819bd1e?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Design Image" class="w-full aspect-[1.47]" /> 
-          <p class="mt-8 text-sm font-bold leading-5 text-violet-700">Design</p>
+      <section class="portfolio-content" *ngIf="data">
+       <article *ngFor="let item of data.slice(0, 3); let i=index;" class="shadow-[0px_12px_16px_-4px_rgba(16,_24,_40,_0.08)] flex flex-col px-6 pt-6 pb-8 shrink-0 rounded-xl bg-white portfolio-item">
+          <!-- <div *ngIf="i<3"> -->
+          <img loading="lazy" src="{{asset_url}}/blogs/{{item.image}}" alt="Design Image" class="w-full aspect-[1.47]" /> 
+          <p class="mt-8 text-sm font-bold leading-5 text-violet-700">{{item.category}}</p>
           <h2 class="flex gap-4 mt-3 text-2xl font-semibold leading-8 text-gray-900">
-            <span>Lorem ipsum dolor</span>
+            <a >{{item.title}}</a>
             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/371ea0539ab50a67fde5cc23e22ee9eed24f46b2606f8405e128a55a1a356a38?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Icon" class="z-10 shrink-0 my-auto w-6 aspect-square" />
           </h2> 
-          <p class="mt-3 text-lg leading-6 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore</p> 
+          <p class="mt-3 text-lg leading-6 text-gray-500" [innerHtml]="item.short_desc"></p> 
           <div class="flex gap-3 self-start mt-10"> 
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ef6ba488eda1bb1384677bf8371538778df378f8a93a1300946537be68b1629?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Author Image" class="shrink-0 w-10 aspect-square" /> 
+            <img loading="lazy" src="{{asset_url}}/blogs/author/{{item.author_img}}" class="shrink-0 w-10 aspect-square"/> 
             <div class="flex flex-col"> 
-              <span class="text-base font-medium text-gray-900">Olivia Rhye</span>
-              <time datetime="2024-06-01" class="text-sm leading-5 text-gray-500">01 Jun 2024</time>
+              <span class="text-base font-medium text-gray-900">{{item.author}}</span>
+              <time class="text-sm leading-5 text-gray-500">{{item.created_at | date:'dd MMM YYYY' }}</time>
             </div>
           </div> 
         </article> 
-        <article class="shadow-[0px_12px_16px_-4px_rgba(16,_24,_40,_0.08)] flex flex-col px-6 pt-6 pb-8 shrink-0 rounded-xl bg-white portfolio-item">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e907e1d7bfbbaa4b6a61067b36f74ea63000b2302665087a62cd9596819bd1e?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Design Image" class="w-full aspect-[1.47]" /> 
-          <p class="mt-8 text-sm font-bold leading-5 text-violet-700">Design</p>
-          <h2 class="flex gap-4 mt-3 text-2xl font-semibold leading-8 text-gray-900">
-            <span>Lorem ipsum dolor</span>
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/371ea0539ab50a67fde5cc23e22ee9eed24f46b2606f8405e128a55a1a356a38?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Icon" class="z-10 shrink-0 my-auto w-6 aspect-square" />
-          </h2> 
-          <p class="mt-3 text-lg leading-6 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore</p> 
-          <div class="flex gap-3 self-start mt-10"> 
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ef6ba488eda1bb1384677bf8371538778df378f8a93a1300946537be68b1629?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Author Image" class="shrink-0 w-10 aspect-square" /> 
-            <div class="flex flex-col"> 
-              <span class="text-base font-medium text-gray-900">Olivia Rhye</span>
-              <time datetime="2024-06-01" class="text-sm leading-5 text-gray-500">01 Jun 2024</time>
-            </div>
-          </div> 
-        </article> 
-        <article class="shadow-[0px_12px_16px_-4px_rgba(16,_24,_40,_0.08)] flex flex-col px-6 pt-6 pb-8 shrink-0 rounded-xl bg-white portfolio-item">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e907e1d7bfbbaa4b6a61067b36f74ea63000b2302665087a62cd9596819bd1e?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Design Image" class="w-full aspect-[1.47]" /> 
-          <p class="mt-8 text-sm font-bold leading-5 text-violet-700">Design</p>
-          <h2 class="flex gap-4 mt-3 text-2xl font-semibold leading-8 text-gray-900">
-            <span>Lorem ipsum dolor</span>
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/371ea0539ab50a67fde5cc23e22ee9eed24f46b2606f8405e128a55a1a356a38?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Icon" class="z-10 shrink-0 my-auto w-6 aspect-square" />
-          </h2> 
-          <p class="mt-3 text-lg leading-6 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore</p> 
-          <div class="flex gap-3 self-start mt-10"> 
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ef6ba488eda1bb1384677bf8371538778df378f8a93a1300946537be68b1629?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Author Image" class="shrink-0 w-10 aspect-square" /> 
-            <div class="flex flex-col"> 
-              <span class="text-base font-medium text-gray-900">Olivia Rhye</span>
-              <time datetime="2024-06-01" class="text-sm leading-5 text-gray-500">01 Jun 2024</time>
-            </div>
-          </div> 
-        </article> 
-        <!-- <article class="portfolio-item">
-          <figure class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e977e2199634e6789b420a7ac5ec413244a9b8bb5af3e246b4db47f7b202698e?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Medical Portfolio 4" />
-          </figure>
-          <h2 class="portfolio-title">Surgical LED or Lights</h2>
-          <p class="portfolio-description">High Efficiency, Superior Optical Performance Surgical LED OR Lights From BenQ Medical Technology Corporation, Taiwan</p>
-          <a href="#" class="portfolio-link" tabindex="0">See All</a>
-        </article> -->
       </section>
     </div> 
 
 
-    <button class="abc justify-center px-8 py-3 mt-11 text-base font-medium leading-5 rounded-md border-solid max-md:px-5 max-md:mt-10" tabindex="0" style=" border: 1px solid rgba(62, 178, 177, 1);">
+    <a routerLink="/blogs" class="abc justify-center px-8 py-3 mt-11 text-base font-medium leading-5 rounded-md border-solid max-md:px-5 max-md:mt-10" tabindex="0" style=" border: 1px solid rgba(62, 178, 177, 1);">
       View More
-    </button> 
+    </a> 
 
 </section>
 

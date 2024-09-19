@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@500;600;700&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.not-found{
+  height: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  h1{
+    font-size: 50px;
+    font-weight: 800;
+  }
+  p{
+    font-size: 40px;
+    font-weight: 300;
+  }
+}

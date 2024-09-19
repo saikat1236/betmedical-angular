@@ -44,20 +44,12 @@
                   />
                 </figure> -->
                 <section class="content-wrapper mt-5">
-                  <div class="content-container">
-                    <div class="text-media-container">
+                  <div class="content-container" *ngIf="data">
+                    <div class="text-media-container" *ngFor="let item of data.slice(0, 1); let i=index;">
                       <section class="text-content">
                         <div class="text-block">
-                          <h2 class="title" style="font: 550 32px/35px 'SF Pro Display', sans-serif;color:#000000">Lorem ipsum dolor sit</h2>
-                          <p class="description" style="font: 400 18px/130% 'Lato', sans-serif;color:#5a5a5a">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliquaLorem
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliquaLorem
-                            ipsum dolor sit amet,
-                          </p>
+                          <h2 class="title" style="font: 550 32px/35px 'SF Pro Display', sans-serif;color:#000000">{{item.title}}</h2>
+                          <p class="description" style="font: 400 18px/130% 'Lato', sans-serif;color:#5a5a5a" [innerHtml]="item.short_desc"></p>
                           <!-- <a href="#" class="cta-button" style="font: 500 20px">Watch More Videos</a> -->
                         </div>
                         
@@ -65,7 +57,7 @@
                       <aside class="image-wrapper">
                         <img
                           loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/454be3fa2160b5b8e60c061582dbebffd9c63867bae076546d8edb7d5c0ef542?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&"
+                          src="{{asset_url}}/review/{{item.image}}"
                           class="image "
                           alt="Relevant description of the image"
                         />
@@ -96,33 +88,28 @@
               Related Videos
             </section>
             <div class="mt-8 w-full max-md:max-w-full">
-              <section class="flex gap-5 max-md:flex-col max-md:gap-0">
-                <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
+              <section class="flex gap-5 max-md:flex-col max-md:gap-0" *ngIf="r_data">
+                <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full" *ngFor="let item of r_data.slice(0, 4); let i=index;">
                   <div class="flex flex-col grow font-bold text-black max-md:mt-8">
                     <img
                       loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1545c41191616bed154a255160eb05e58dd158aa7d74926b97cffa1f1fd605f?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&"
-                      alt="Dr. Manish N Raval"
+                      src="{{asset_url}}/video/{{item.image}}"
+                      alt="{{item.title}}"
                       class="w-full aspect-[1.72]"
                       style="border-top-right-radius: 15px;border-top-left-radius: 15px; "
                     />
                     <div
-                      class="flex flex-col p-3 " style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;"
+                      class="flex flex-col p-3 " style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;height: 100%;"
                     >
-                    <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">Dr. Manish N Raval</h3>
-                    <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000">
-                      Vascular & Endo Vascular Surgeon Niva ASK Life Sciences,
-                      Ahmedabad
-                    </p>
-                      <button
-                        class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;border-radius: 8px;"
-                      >
-                        Watch On Youtube
-                      </button>
+                    <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">{{item.title}}</h3>
+                    <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000" [innerHtml]="item.short_desc"></p>
+                      <a href="{{item.slug}}" target="_blank" 
+                        class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;text-align: center;border-radius: 8px;"
+                      >{{item.button_title}}</a>
                     </div>
                   </div>
                 </article>
-                <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
+                <!-- <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
                   <div class="flex flex-col grow font-bold text-black max-md:mt-8">
                     <img
                       loading="lazy"
@@ -199,7 +186,7 @@
                       </button>
                     </div>
                   </div>
-                </article>
+                </article> -->
               </section>
             </div>
   

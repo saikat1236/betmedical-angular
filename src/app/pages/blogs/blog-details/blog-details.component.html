@@ -1,0 +1,18 @@
+<!--Gallery Details Start-->
+<section class="gallery-detail pad-tb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div>
+          <img loading="lazy" src="{{asset_url}}/blogs/{{data.image}}" alt="{{data.title}}" class="w-full" /> 
+          <h2>{{data.title}}</h2>
+          <p [innerHtml]="data.short_desc">SUMMARY : </p>
+          <p>AUTHOR : {{data.author}}</p>
+          <p [innerHtml]="data.long_desc">DESC : {{data.long_desc}}</p>
+          <p>CATEGORIES : {{data.category}}</p>
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>
+<!--Gallery Details End-->
