@@ -325,6 +325,7 @@
             transition:0.5s;
             opacity:1;
             display:block;
+            border-radius:14px;
             //height:auto;
         }
         .popup{
@@ -339,8 +340,8 @@
             opacity:0;
             display:none;
             //height:0;
-            font-size: 18px;
-            line-height: 44px;
+            font-size: 16px;
+            line-height: 24px;
             font-weight: 600;
             font-family: SF Pro Display,sans-serif;
             text-align: center;
@@ -368,48 +369,56 @@
     }
 
     .marker1{
-        top: 167px;
-        left: 172px;
+        top: 140px;
+        left: 374px;
         .popup{
             bottom: 40px;
             left: -87px
         }
     }
     .marker2{
-        top: 120px;
-        left: 332px;
+        top: 132px;
+        left: 360px;
         .popup{
             bottom: 40px;
             left: -87px
         }
     }
     .marker3{
-        top: 105px;
-        left: 473px;
+        top: 236px;
+        left: 750px;
         .popup{
             bottom: 40px;
             left: -87px
         }
     }
     .marker4{
-        top: 154px;
-        left: 550px;
+        top: 245px;
+        left: 710px;
         .popup{
             bottom: 40px;
             left: -87px
         }
     }
     .marker5{
-        top: 188px;
-        left: 660px;
+        top: 240px;
+        left: 740px;
         .popup{
             bottom: 40px;
             left: -87px
         }
     }
     .marker6{
-        top: 222px;
-        left: 406px;
+        top: 178px;
+        left: 114px;
+        .popup{
+            bottom: 40px;
+            left: -87px
+        }
+    }
+    .marker7{
+        top: 256px;
+        left: 685px;
         .popup{
             bottom: 40px;
             left: -87px
@@ -430,51 +439,60 @@
             .popup{
                 font-size:12px;
                 padding:10px;
+                line-height:22px;
             }   
         }
         .marker1{
-            top: 100px;
-            left: 106px;
+            top: 83px;
+            left: 236px;
             .popup{
                 bottom: 26px;
                 left: -87px
             }
         }
         .marker2{
-            top: 73px;
-            left: 205px;
+            top: 78px;
+            left: 224px;
             .popup{
                 bottom: 26px;
                 left: -87px
             }
         }
         .marker3{
-            top: 64px;
-            left: 294px;
+            top: 145px;
+            left: 470px;
             .popup{
                 bottom: 26px;
                 left: -87px
             }
         }
         .marker4{
-            top: 94px;
-            left: 340px;
+            top: 157px;
+            left: 444px;
             .popup{
                 bottom: 26px;
                 left: -87px
             }
         }
         .marker5{
-            top: 114px;
-            left: 410px;
+            top: 140px;
+            left: 463px;
             .popup{
                 bottom: 26px;
                 left: -87px
             }
         }
         .marker6{
-            top: 136px;
-            left: 256px;
+            top: 110px;
+            left: 62px;
+            .popup{
+                bottom: 26px;
+                left: -87px
+            }
+        }
+        .marker7{
+            top: 157px;
+            left: 428px;
             .popup{
                 bottom: 26px;
                 left: -87px
@@ -501,48 +519,56 @@
             }   
         }
         .marker1{
-            top: 67px;
-            left: 73px;
+            top: 56px;
+            left: 164px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker2{
-            top: 48px;
-            left: 143px;
+            top: 54px;
+            left: 158px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker3{
-            top: 42px;
-            left: 204px;
+            top: 100px;
+            left: 329px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker4{
-            top: 65px;
-            left: 238px;
+            top: 104px;
+            left: 308px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker5{
-            top: 80px;
-            left: 287px;
+            top: 89px;
+            left: 324px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker6{
-            top: 94px;
-            left: 176px;
+            top: 70px;
+            left: 46px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker7{
+            top: 107px;
+            left: 297px;
             .popup{
                 bottom: 26px;
                 left: -67px
@@ -569,48 +595,56 @@
             }   
         }
         .marker1{
-            top: 58px;
-            left: 62px;
+            top: 46px;
+            left: 140px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker2{
-            top: 40px;
-            left: 122px;
+            top: 43px;
+            left: 132px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker3{
-            top: 36px;
-            left: 174px;
+            top: 80px;
+            left: 277px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker4{
-            top: 52px;
-            left: 203px;
+            top: 86px;
+            left: 263px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker5{
-            top: 67px;
-            left: 244px;
+            top: 84px;
+            left: 281px;
             .popup{
                 bottom: 26px;
                 left: -67px
             }
         }
         .marker6{
-            top: 78px;
-            left: 149px;
+            top: 60px;
+            left: 34px;
+            .popup{
+                bottom: 26px;
+                left: -67px
+            }
+        }
+        .marker7{
+            top: 90px;
+            left: 253px;
             .popup{
                 bottom: 26px;
                 left: -67px

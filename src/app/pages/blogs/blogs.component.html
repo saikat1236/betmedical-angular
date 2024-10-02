@@ -15,7 +15,7 @@
           <img loading="lazy" src="{{asset_url}}/blogs/{{item.image}}" alt="Design Image" class="w-full aspect-[1.47]" /> 
           <p class="mt-8 text-sm font-bold leading-5 text-violet-700">{{item.category}}</p>
           <h2 class="flex gap-4 mt-3 text-2xl font-semibold leading-8 text-gray-900">
-            <a >{{item.title}}</a>
+            <a routerLink="/blog/{{item.slug}}">{{item.title}}</a>
             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/371ea0539ab50a67fde5cc23e22ee9eed24f46b2606f8405e128a55a1a356a38?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Icon" class="z-10 shrink-0 my-auto w-6 aspect-square" />
           </h2> 
           <p class="mt-3 text-lg leading-6 text-gray-500" [innerHtml]="item.short_desc"></p> 
