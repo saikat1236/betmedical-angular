@@ -1,19 +1,21 @@
+
+
 <section class="main-section">
   <!-- <img
     src="../../../assets/Group 292565.png"
     alt="Endonaut Fusion Imaging & Navigation"
     class="background-image"
   /> -->
-  <!-- <video class="background-image" autoplay loop muted playsinline>
-    <source src="../../../assets/medical assets_Submission.mp4" type="video/mp4">
+  <video id="backgroundimage" class="background-image" autoplay loop playsinline muted preload="auto">
+    <source src="../../../assets/vid123.m4v" type="video/mp4" autoplay loop playsinline muted preload="auto">
     Endonaut Fusion Imaging & Navigation
-  </video> -->
+  </video>
 
-  <img
+  <!-- <img
     class="background-image"
     src="../../../assets/giff.gif"
     alt="Endonaut Fusion Imaging & Navigation"
-  />
+  /> -->
 
   <!-- <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -36,3 +38,22 @@
     fusion systems compatible with any imaging modality and C-arm
   </p> -->
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById("backgroundimage");
+    console.log("hello");
+
+    if (video) {
+      // Ensure the video is muted for autoplay to work
+      video.muted = true;
+      video.setAttribute("muted", ""); // Alternative to ensure muting
+      video.setAttribute("playsinline", ""); // To allow inline playback on mobile browsers
+
+      // Try to play the video manually if the autoplay doesn't work
+      video.play().catch(function(error) {
+        console.error("Autoplay prevented. Muting and attempting to play again:", error);
+      });
+    }
+  });
+</script>
