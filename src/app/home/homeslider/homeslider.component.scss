@@ -1,56 +1,56 @@
 :host {
-    display: contents;
-  }
+  display: contents;
+}
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 800px;
+  color: #fff;
+  padding: 80px;
+}
+@media (max-width: 991px) {
   .main-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    min-height: 575px;
-    color: #fff;
-    padding: 80px;
+    padding: 0 20px;
   }
-  @media (max-width: 991px) {
-    .main-section {
-      padding: 0 20px;
-    }
-  }
-  .background-image {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
+}
+.background-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.title {
+  position: relative;
+  // margin-top: 150px;
+  font: 700 44px/59% "SF Pro Display", sans-serif;
+  color: #fff;
+}
+@media (max-width: 991px) {
   .title {
-    position: relative;
-    // margin-top: 150px;
-    font: 700 44px/59% "SF Pro Display", sans-serif;
-    color: #fff;
-  }
-  @media (max-width: 991px) {
-    .title {
-      max-width: 100%;
-      margin-top: 40px;
-      font-size:xx-large;
-      text-align: center;
-      font: 400 22px/32px "SF Pro Display", sans-serif;
-      font-weight: bold;
-    }
-  }
-  .description {
-    position: relative;
+    max-width: 100%;
+    margin-top: 40px;
+    font-size:xx-large;
     text-align: center;
-    margin-top: 25px;
-    width: 740px;
-    font: 200 22px/32px "'Lato'", sans-serif;
+    font: 400 22px/32px "SF Pro Display", sans-serif;
+    font-weight: bold;
   }
-  @media (max-width: 991px) {
-    .description {
-      max-width: 100%;
-      font-size: small;
-    }
+}
+.description {
+  position: relative;
+  text-align: center;
+  margin-top: 25px;
+  width: 740px;
+  font: 200 22px/32px "'Lato'", sans-serif;
+}
+@media (max-width: 991px) {
+  .description {
+    max-width: 100%;
+    font-size: small;
   }
+}
