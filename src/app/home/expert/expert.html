@@ -1,194 +1,194 @@
 <section class="flex flex-col justify-center items-center px-20 py-10 bg-opacity-70 max-md:px-5 pad"> 
-            <!-- <header class="self-center mt-5 text-center" style="font-family: 'Lato', sans-serif; font-size: 24px; line-height: 25px; color:#000000">
-              OUR EXPERTS
-            </header> -->
-            <header class="text-center" style="color: #000;font:Lato, sans-serif; font-size: 24px;">OUR EXPERTS</header> 
-            <h1
-              class="self-center mt-4 portfolio-header font-bold leading-10 text-center text-black max-md:max-w-full" 
-            >
-              Lorem ipsum dolor sit ipsum dolor site
-            </h1>
-            <!-- <article class=" pb-5 mt-20 w-full rounded-3xl max-md:px-5 max-md:mt-10 max-md:max-w-full" style="background-color: #CEF5F5;"> -->
-              <!-- <div class="flex gap-5 max-md:flex-col max-md:gap-0"> -->
-                <!-- <div class="flex flex-col w-[50%] ">
-                  <section
-                    class="flex flex-col self-stretch my-auto py-5 font-semibold max-md:mt-10 max-md:max-w-full"
-                  >
-                    <h2 class="text-3xl text-black max-md:max-w-full">
-                      Lorem ipsum dolor sit
-                    </h2>
-                    <p
-                      class="mt-6 text-lg leading-6 text-zinc-600 max-md:max-w-full"
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem
-                      ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliquaLorem
-                      ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliquaLorem
-                      ipsum dolor sit amet,
-                    </p>
-                    <button
-                      class="justify-center self-start px-2 py-2 mt-6 text-xl  text-white bg-teal-400 rounded-lg max-md:px-5"
-                    >
-                      Watch More Videos
-                    </button>
-                  </section>
-                </div>
-                <figure class="flex flex-col ml-5 w-[50%] max-md:ml-0 max-md:w-full">
-                  <img
-                    loading="lazy"
-                    src="../../../assets/Photo Main.png"
-                    alt="Expert Image"
-                    class="grow mt-0 w-200 aspect-[0.84] max-md:mt-10"
-                  />
-                </figure> -->
-                <section class="content-wrapper mt-5">
-                  <div class="content-container" *ngIf="data">
-                    <div class="text-media-container" *ngFor="let item of data.slice(0, 1); let i=index;">
-                      <section class="text-content">
-                        <div class="text-block">
-                          <h2 class="title" style="font: 550 32px/35px 'SF Pro Display', sans-serif;color:#000000">{{item.title}}</h2>
-                          <p class="description" style="font: 400 18px/130% 'Lato', sans-serif;color:#5a5a5a" [innerHtml]="item.short_desc"></p>
-                          <a href="https://www.youtube.com/@betmedical7645/videos" target="_blank" class="cta-button" style="font: 500 20px">Watch More Videos</a>
-                        </div>
-                        
-                      </section>
-                      <aside class="image-wrapper">
-                        <img
-                          loading="lazy"
-                          src="{{asset_url}}/review/{{item.image}}"
-                          class="image "
-                          alt="Relevant description of the image"
-                        />
-                      </aside>
-                      
-                    </div>
-                  </div>
-                </section>
-                <!-- <section class="video-section1">
-                  <div class="content-wrapper1">
-                    <div class="text-content1">
-                      <h2 class="title1">Lorem ipsum dolor sit</h2>
-                      <p class="description1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor sit amet,
-                      </p>
-                      <button class="cta-button1">Watch More Videos</button>
-                    </div>
-                    <div class="image-wrapper1">
-                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/870f2acc5ede149c11f4b3504bea7b57a099c912050d60dc3ac6222349608fbb?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Video thumbnail" class="thumbnail" loading="lazy">
-                    </div>
-                  </div>
-                </section> -->
-              <!-- </div> -->
-            <!-- </article> -->
-            <section
-              class="mt-10 w-full text-2xl font-semibold leading-6 text-black max-md:mt-10 max-md:max-w-full"
-            >
-              Related Videos
+  <!-- <header class="self-center mt-5 text-center" style="font-family: 'Lato', sans-serif; font-size: 24px; line-height: 25px; color:#000000">
+    OUR EXPERTS
+  </header> -->
+  <header class="text-center" style="color: #000;font:Lato, sans-serif; font-size: 1.875rem;font-weight:700;" *ngIf="data.length">Our Experts</header> 
+  <!--<h1
+    class="self-center mt-4 portfolio-header font-bold leading-10 text-center text-black max-md:max-w-full" *ngIf="data.length"
+  >
+    Lorem ipsum dolor sit ipsum dolor site
+  </h1>-->
+  <!-- <article class=" pb-5 mt-20 w-full rounded-3xl max-md:px-5 max-md:mt-10 max-md:max-w-full" style="background-color: #CEF5F5;"> -->
+    <!-- <div class="flex gap-5 max-md:flex-col max-md:gap-0"> -->
+      <!-- <div class="flex flex-col w-[50%] ">
+        <section
+          class="flex flex-col self-stretch my-auto py-5 font-semibold max-md:mt-10 max-md:max-w-full"
+        >
+          <h2 class="text-3xl text-black max-md:max-w-full">
+            Lorem ipsum dolor sit
+          </h2>
+          <p
+            class="mt-6 text-lg leading-6 text-zinc-600 max-md:max-w-full"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliquaLorem
+            ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliquaLorem
+            ipsum dolor sit amet,
+          </p>
+          <button
+            class="justify-center self-start px-2 py-2 mt-6 text-xl  text-white bg-teal-400 rounded-lg max-md:px-5"
+          >
+            Watch More Videos
+          </button>
+        </section>
+      </div>
+      <figure class="flex flex-col ml-5 w-[50%] max-md:ml-0 max-md:w-full">
+        <img
+          loading="lazy"
+          src="../../../assets/Photo Main.png"
+          alt="Expert Image"
+          class="grow mt-0 w-200 aspect-[0.84] max-md:mt-10"
+        />
+      </figure> -->
+      <section class="content-wrapper mt-5" *ngIf="data.length">
+        <div class="content-container" *ngIf="data">
+          <div class="text-media-container" *ngFor="let item of data.slice(0, 1); let i=index;">
+            <section class="text-content">
+              <div class="text-block">
+                <h2 class="title" style="font: 550 32px/35px 'SF Pro Display', sans-serif;color:#000000">{{item.title}}</h2>
+                <p class="description" style="font: 400 18px/130% 'Lato', sans-serif;color:#5a5a5a" [innerHtml]="item.short_desc"></p>
+                <a href="https://www.youtube.com/@betmedical7645/videos" target="_blank" class="cta-button" style="font: 500 20px">Watch More Videos</a>
+              </div>
+              
             </section>
-            <div class="mt-8 w-full max-md:max-w-full">
-              <section class="flex gap-5 max-md:flex-col max-md:gap-0" *ngIf="r_data">
-                <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full" *ngFor="let item of r_data.slice(0, 4); let i=index;">
-                  <div class="flex flex-col grow font-bold text-black max-md:mt-8">
-                    <img
-                      loading="lazy"
-                      src="{{asset_url}}/video/{{item.image}}"
-                      alt="{{item.title}}"
-                      class="w-full aspect-[1.72]"
-                      style="border-top-right-radius: 15px;border-top-left-radius: 15px; "
-                    />
-                    <div
-                      class="flex flex-col p-3 " style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;height: 100%;"
-                    >
-                    <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">{{item.title}}</h3>
-                    <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000" [innerHtml]="item.short_desc"></p>
-                      <a href="{{item.slug}}" target="_blank" 
-                        class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;text-align: center;border-radius: 8px;"
-                      >{{item.button_title}}</a>
-                    </div>
-                  </div>
-                </article>
-                <!-- <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
-                  <div class="flex flex-col grow font-bold text-black max-md:mt-8">
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1545c41191616bed154a255160eb05e58dd158aa7d74926b97cffa1f1fd605f?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&"
-                      alt="Dr. Manish N Raval"
-                      class="w-full aspect-[1.72]"
-                      style="border-top-right-radius: 15px;border-top-left-radius: 15px; "
-                    />
-                    <div
-                      class="flex flex-col p-3 rounded-none" style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px; /* Adjust the value as needed */
-  border-bottom-right-radius: 15px;"
-                    >
-                    <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">Dr. Manish N Raval</h3>
-                    <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000">
-                      Vascular & Endo Vascular Surgeon Niva ASK Life Sciences,
-                      Ahmedabad
-                    </p>
-                      <button
-                        class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;border-radius: 8px;"
-                      >
-                        Watch On Youtube
-                      </button>
-                    </div>
-                  </div>
-                </article>
-                <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
-                  <div class="flex flex-col grow font-bold text-black max-md:mt-8">
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1545c41191616bed154a255160eb05e58dd158aa7d74926b97cffa1f1fd605f?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&"
-                      alt="Dr. Manish N Raval"
-                      class="w-full aspect-[1.72]"
-                      style="border-top-right-radius: 15px;border-top-left-radius: 15px; "
-                    />
-                    <div
-                      class="flex flex-col p-3 rounded-none" style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px; /* Adjust the value as needed */
-  border-bottom-right-radius: 15px;"
-                    >
-                    <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">Dr. Manish N Raval</h3>
-                    <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000">
-                      Vascular & Endo Vascular Surgeon Niva ASK Life Sciences,
-                      Ahmedabad
-                    </p>
-                      <button
-                        class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;border-radius: 8px;"
-                      >
-                        Watch On Youtube
-                      </button>
-                    </div>
-                  </div>
-                </article>
-                <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
-                  <div class="flex flex-col grow font-bold text-black max-md:mt-8">
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1545c41191616bed154a255160eb05e58dd158aa7d74926b97cffa1f1fd605f?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&"
-                      alt="Dr. Manish N Raval"
-                      class="w-full aspect-[1.72]"
-                      style="border-top-right-radius: 15px;border-top-left-radius: 15px; "
-                    />
-                    <div
-                      class="flex flex-col p-3 rounded-none" style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px; /* Adjust the value as needed */
-  border-bottom-right-radius: 15px;"
-                    >
-                    <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">Dr. Manish N Raval</h3>
-                      <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000">
-                        Vascular & Endo Vascular Surgeon Niva ASK Life Sciences,
-                        Ahmedabad
-                      </p>
-                      <button
-                        class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;border-radius: 8px;"
-                      >
-                        Watch On Youtube
-                      </button>
-                    </div>
-                  </div>
-                </article> -->
-              </section>
-            </div>
-  
-  
+            <aside class="image-wrapper">
+              <img
+                loading="lazy"
+                src="{{asset_url}}/review/{{item.image}}"
+                class="image "
+                alt="Relevant description of the image"
+              />
+            </aside>
+            
+          </div>
+        </div>
+      </section>
+      <!-- <section class="video-section1">
+        <div class="content-wrapper1">
+          <div class="text-content1">
+            <h2 class="title1">Lorem ipsum dolor sit</h2>
+            <p class="description1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor sit amet,
+            </p>
+            <button class="cta-button1">Watch More Videos</button>
+          </div>
+          <div class="image-wrapper1">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/870f2acc5ede149c11f4b3504bea7b57a099c912050d60dc3ac6222349608fbb?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&" alt="Video thumbnail" class="thumbnail" loading="lazy">
+          </div>
+        </div>
+      </section> -->
+    <!-- </div> -->
+  <!-- </article> -->
+  <section
+    class="mt-10 w-full text-2xl font-semibold leading-6 text-black max-md:mt-10 max-md:max-w-full" *ngIf="r_data.length"
+  >
+    Related Videos
   </section>
+  <div class="mt-8 w-full max-md:max-w-full" *ngIf="r_data.length">
+    <section class="flex gap-5 max-md:flex-col max-md:gap-0" *ngIf="r_data">
+      <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full" *ngFor="let item of r_data.slice(0, 4); let i=index;">
+        <div class="flex flex-col grow font-bold text-black max-md:mt-8">
+          <img
+            loading="lazy"
+            src="{{asset_url}}/video/{{item.image}}"
+            alt="{{item.title}}"
+            class="w-full aspect-[1.72]"
+            style="border-top-right-radius: 15px;border-top-left-radius: 15px; "
+          />
+          <div
+            class="flex flex-col p-3 " style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;height: 100%;"
+          >
+          <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">{{item.title}}</h3>
+          <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000" [innerHtml]="item.short_desc"></p>
+            <a href="{{item.slug}}" target="_blank" 
+              class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;text-align: center;border-radius: 8px;"
+            >{{item.button_title}}</a>
+          </div>
+        </div>
+      </article>
+      <!-- <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
+        <div class="flex flex-col grow font-bold text-black max-md:mt-8">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1545c41191616bed154a255160eb05e58dd158aa7d74926b97cffa1f1fd605f?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&"
+            alt="Dr. Manish N Raval"
+            class="w-full aspect-[1.72]"
+            style="border-top-right-radius: 15px;border-top-left-radius: 15px; "
+          />
+          <div
+            class="flex flex-col p-3 rounded-none" style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px; /* Adjust the value as needed */
+border-bottom-right-radius: 15px;"
+          >
+          <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">Dr. Manish N Raval</h3>
+          <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000">
+            Vascular & Endo Vascular Surgeon Niva ASK Life Sciences,
+            Ahmedabad
+          </p>
+            <button
+              class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;border-radius: 8px;"
+            >
+              Watch On Youtube
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
+        <div class="flex flex-col grow font-bold text-black max-md:mt-8">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1545c41191616bed154a255160eb05e58dd158aa7d74926b97cffa1f1fd605f?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&"
+            alt="Dr. Manish N Raval"
+            class="w-full aspect-[1.72]"
+            style="border-top-right-radius: 15px;border-top-left-radius: 15px; "
+          />
+          <div
+            class="flex flex-col p-3 rounded-none" style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px; /* Adjust the value as needed */
+border-bottom-right-radius: 15px;"
+          >
+          <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">Dr. Manish N Raval</h3>
+          <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000">
+            Vascular & Endo Vascular Surgeon Niva ASK Life Sciences,
+            Ahmedabad
+          </p>
+            <button
+              class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;border-radius: 8px;"
+            >
+              Watch On Youtube
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full">
+        <div class="flex flex-col grow font-bold text-black max-md:mt-8">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1545c41191616bed154a255160eb05e58dd158aa7d74926b97cffa1f1fd605f?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&"
+            alt="Dr. Manish N Raval"
+            class="w-full aspect-[1.72]"
+            style="border-top-right-radius: 15px;border-top-left-radius: 15px; "
+          />
+          <div
+            class="flex flex-col p-3 rounded-none" style="background-color: rgba(62, 178, 177,0.15); border-bottom-left-radius: 15px; /* Adjust the value as needed */
+border-bottom-right-radius: 15px;"
+          >
+          <h3 class=""  style="color: #000;font:Lato, sans-serif; font-size: 16px;">Dr. Manish N Raval</h3>
+            <p class="mt-2 leading-5"  style="font: 400 12px/18px 'Lato', sans-serif;color:#000000">
+              Vascular & Endo Vascular Surgeon Niva ASK Life Sciences,
+              Ahmedabad
+            </p>
+            <button
+              class="justify-center p-2 mt-3" style="background-color: rgba(62, 178, 177,1);font: 700 14px 'Lato', sans-serif;color:#fff;border-radius: 8px;"
+            >
+              Watch On Youtube
+            </button>
+          </div>
+        </div>
+      </article> -->
+    </section>
+  </div>
+
+
+</section>

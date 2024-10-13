@@ -134,107 +134,107 @@
 
 <section class="flex flex-col justify-center items-center pad py-10 bg-opacity-70 max-md:px-5" > 
 
-    <div class="flex gap-5 mt-10 max-md:flex-col max-md:gap-0 ">
-      <figure class="flex flex-col max-md:w-70">
-        <img loading="lazy"
-          src="assets/Group 292565 2.png"
-          alt="Image of BET Medical innovations" class="w-70 aspect-[1.37] max-md:mt-10" />
-      </figure>
-      <article class="fle col flex-col max-md:w-full">
-        <div class="flex flex-col max-md:mt-10">
-          <h1 class="" style="font-family:'SF Pro Display', sans-serif;font-size:32px;font-weight: bold;color:#0E1923">About Us</h1>
-          <p class="mt-3 leading-6" style="font:400 18px/130% 'Lato', sans-serif;color:#4a4a4a">
-            BET Medical is a responsible and innovative organization that has introduced several groundbreaking
-            technologies in the healthcare industry. For instance, the table-top sliding on the operation theatre
-            table, which is now widely used, was first introduced and backed by BET Medical over 25 years ago.
-            Similarly, the first flat panel 3D C-Arm and 4-way motorized flat panel C-arm machines in India and Asia
-            were sold and installed by BET Medical, respectively. First to Introduce Therenva Vascular Fusion Imaging
-            and Navigation workstation.
-            <br /><br />
-            Responsibility is at the core of BET Medical’s operations, starting with not over-selling products and
-            ensuring the use of contemporary technology to add value to customers through better pricing, service, and
-            support. The company’s sales and service teams are dedicated to providing a comprehensive range of
-            products and brands, cementing strong partnerships with principals in Germany, Taiwan, Japan, USA, Italy,
-            and Korea for the past 33 years.
-          </p>
-        </div>
-      </article>
-    </div>
-    <div class="gap-8 mt-10">
-  <h1 class="mt-20 portfolio-header text-center max-md:max-w-full" >
-    Product portfolio
-  </h1> 
-    </div>
-
-  <div class="gap-8 mt-2">
-    <section class="portfolio-content">
-      <article *ngFor="let item of visibleItems.slice(0, 6)" class="portfolio-item">
-        <figure class="image-wrapper">
-          <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
-        </figure>
-        <h2 class="portfolio-title">{{ item.title }}</h2>
-        <p class="portfolio-description" style="height: 3rem;">{{ item.description }}</p>
-        <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
-      </article>
-    </section>
-    <section class="portfolio-content" *ngIf="showAll">
-      <article *ngFor="let item of visibleItems.slice(6, 9)" class="portfolio-item">
-        <figure class="image-wrapper">
-          <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
-        </figure>
-        <h2 class="portfolio-title">{{ item.title }}</h2>
-        <p class="portfolio-description" style="height: 3rem;">{{ item.description }}</p>
-        <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
-      </article>
-    </section>
-    <!-- <section class="portfolio-content" *ngIf="showAll">
-      <article *ngFor="let item of visibleItems.slice(9, 10)" class="portfolio-item2">
-        <figure class="image-wrapper">
-          <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
-        </figure>
-        <h2 class="portfolio-title">{{ item.title }}</h2>
-        <p class="portfolio-description" style="height: 3rem;">{{ item.description }}</p>
-        <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
-      </article>
-    </section> -->
-    <section class="portfolio-content" *ngIf="showAll">
-      <div class="grid grid-cols-1 md:grid-cols-3" style="gap: 30px;">
-        <article *ngFor="let item of visibleItems.slice(9, 10)" class="portfolio-item">
-          <figure class="image-wrapper">
-            <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy"/>
-          </figure>
-          <h2 class="portfolio-title">{{ item.title }}</h2>
-          <p class="portfolio-description text-gray-700" style="height: 3rem;">{{ item.description }}</p>
-          <a [href]="item.url" class="portfolio-link text-blue-500" tabindex="0">See All</a>
-        </article>
+  <div class="flex gap-5 mt-10 max-md:flex-col max-md:gap-0 ">
+    <figure class="flex flex-col max-md:w-70">
+      <img loading="lazy"
+        src="assets/Group 292565 2.png"
+        alt="Image of BET Medical innovations" class="w-70 aspect-[1.37] max-md:mt-10" />
+    </figure>
+    <article class="fle col flex-col max-md:w-full">
+      <div class="flex flex-col max-md:mt-10">
+        <h1 class="" style="font-family:'SF Pro Display', sans-serif;font-size:32px;font-weight: bold;color:#0E1923">About Us</h1>
+        <p class="mt-3 leading-6" style="font:400 18px/130% 'Lato', sans-serif;color:#4a4a4a">
+          BET Medical is a responsible and innovative organization that has introduced several groundbreaking
+          technologies in the healthcare industry. For instance, the table-top sliding on the operation theatre
+          table, which is now widely used, was first introduced and backed by BET Medical over 25 years ago.
+          Similarly, the first flat panel 3D C-Arm and 4-way motorized flat panel C-arm machines in India and Asia
+          were sold and installed by BET Medical, respectively. First to Introduce Therenva Vascular Fusion Imaging
+          and Navigation workstation.
+          <br /><br />
+          Responsibility is at the core of BET Medical’s operations, starting with not over-selling products and
+          ensuring the use of contemporary technology to add value to customers through better pricing, service, and
+          support. The company’s sales and service teams are dedicated to providing a comprehensive range of
+          products and brands, cementing strong partnerships with principals in Germany, Taiwan, Japan, USA, Italy,
+          and Korea for the past 33 years.
+        </p>
       </div>
-    </section>
-    
-    
+    </article>
+  </div>
+  <div class="gap-8 mt-10">
+<h1 class="mt-20 portfolio-header text-center max-md:max-w-full" >
+  Product Portfolio
+</h1> 
   </div>
 
-  <!-- <article class="card flex-row mt-5">
-    <img 
-      loading="lazy"
-      [src]="showAll ? 'https://cdn.builder.io/api/v1/image/assets/TEMP/de0fff475cba2063306d4933937a5a2cf06b2cc5a8d06650e2a7a0051ad2b200?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&' : 'https://cdn.builder.io/api/v1/image/assets/TEMP/4d6f03407e605a258de11f39907e66442bf031cefe30919a3fca06eacd9ee2bd?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&'" 
-      alt="Description of image" 
-      class="card-image" 
-      style="height: 20px;width: 20px;"
-    />
-    <button (click)="toggleShow()" class="card-button" tabindex="0">
-      {{ showAll ? 'Show Less' : 'Load More' }}
-    </button>
-  </article> -->
-    <button (click)="toggleShow()" class="abc justify-center px-8 py-3 mt-11 text-base font-medium leading-5 rounded-md border-solid max-md:px-5 max-md:mt-10" tabindex="0" style=" border: 1px solid rgba(62, 178, 177, 1);">
-      {{ showAll ? 'Show Less' : 'Load More' }}
-    </button> 
+<div class="gap-8 mt-2">
+  <section class="portfolio-content">
+    <article *ngFor="let item of visibleItems.slice(0, 6)" class="portfolio-item">
+      <figure class="image-wrapper">
+        <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
+      </figure>
+      <h2 class="portfolio-title">{{ item.title }}</h2>
+      <p class="portfolio-description" style="height: 3rem;">{{ item.description }}</p>
+      <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
+    </article>
+  </section>
+  <section class="portfolio-content" *ngIf="showAll">
+    <article *ngFor="let item of visibleItems.slice(6, 9)" class="portfolio-item">
+      <figure class="image-wrapper">
+        <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
+      </figure>
+      <h2 class="portfolio-title">{{ item.title }}</h2>
+      <p class="portfolio-description" style="height: 3rem;">{{ item.description }}</p>
+      <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
+    </article>
+  </section>
+  <!-- <section class="portfolio-content" *ngIf="showAll">
+    <article *ngFor="let item of visibleItems.slice(9, 10)" class="portfolio-item2">
+      <figure class="image-wrapper">
+        <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy" />
+      </figure>
+      <h2 class="portfolio-title">{{ item.title }}</h2>
+      <p class="portfolio-description" style="height: 3rem;">{{ item.description }}</p>
+      <a href="{{item.url}}" class="portfolio-link" tabindex="0">See All</a>
+    </article>
+  </section> -->
+  <section class="portfolio-content" *ngIf="showAll">
+    <div class="grid grid-cols-1 md:grid-cols-3" style="gap: 30px;">
+      <article *ngFor="let item of visibleItems.slice(9, 10)" class="portfolio-item">
+        <figure class="image-wrapper">
+          <img [src]="item.imgSrc" [alt]="item.imgAlt" loading="lazy"/>
+        </figure>
+        <h2 class="portfolio-title">{{ item.title }}</h2>
+        <p class="portfolio-description text-gray-700" style="height: 3rem;">{{ item.description }}</p>
+        <a [href]="item.url" class="portfolio-link text-blue-500" tabindex="0">See All</a>
+      </article>
+    </div>
+  </section>
   
+  
+</div>
 
-  <!-- <article class="card flex-row mt-5">
-    <button (click)="toggleShow()" class="card-button" tabindex="0">
-      {{ showAll ? 'Show Less' : 'Load More' }}
-    </button>
-  </article> -->
+<!-- <article class="card flex-row mt-5">
+  <img 
+    loading="lazy"
+    [src]="showAll ? 'https://cdn.builder.io/api/v1/image/assets/TEMP/de0fff475cba2063306d4933937a5a2cf06b2cc5a8d06650e2a7a0051ad2b200?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&' : 'https://cdn.builder.io/api/v1/image/assets/TEMP/4d6f03407e605a258de11f39907e66442bf031cefe30919a3fca06eacd9ee2bd?apiKey=e4359e71dc7544f59d6c1a8f2e8a7240&'" 
+    alt="Description of image" 
+    class="card-image" 
+    style="height: 20px;width: 20px;"
+  />
+  <button (click)="toggleShow()" class="card-button" tabindex="0">
+    {{ showAll ? 'Show Less' : 'Load More' }}
+  </button>
+</article> -->
+  <button (click)="toggleShow()" class="abc justify-center px-8 py-3 mt-11 text-base font-medium leading-5 rounded-md border-solid max-md:px-5 max-md:mt-10" tabindex="0" style=" border: 1px solid rgba(62, 178, 177, 1);">
+    {{ showAll ? 'Show Less' : 'Load More' }}
+  </button> 
+
+
+<!-- <article class="card flex-row mt-5">
+  <button (click)="toggleShow()" class="card-button" tabindex="0">
+    {{ showAll ? 'Show Less' : 'Load More' }}
+  </button>
+</article> -->
 </section>
 
 
