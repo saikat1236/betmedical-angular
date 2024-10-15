@@ -6,10 +6,72 @@
     alt="Endonaut Fusion Imaging & Navigation"
     class="background-image"
   /> -->
-  <video id="backgroundimage" class="background-image" autoplay loop playsinline muted preload="auto">
+  <!-- <video id="backgroundimage" class="background-image" autoplay loop playsinline muted preload="auto">
     <source src="../../../assets/vid123.m4v" type="video/mp4" autoplay loop playsinline muted preload="auto">
     Endonaut Fusion Imaging & Navigation
-  </video>
+  </video> -->
+  <!-- <div class="owl-carousel owl-theme">
+    <div *ngFor="let slide of slides" class="item">
+      <video class="background-video" autoplay loop muted playsinline>
+        <source [src]="slide.videoSrc" type="video/mp4">
+      </video>
+      <div class="text-banner">
+        <h2>{{ slide.text }}</h2>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="owl-carousel owl-theme">
+    <div *ngFor="let slide of slides" class="item">
+      <video class="background-video" autoplay loop muted playsinline>
+        <source [src]="slide.videoSrc" type="video/mp4">
+      </video>
+      <div class="text-banner">
+        <h2>{{ slide.text }}</h2>
+      </div>
+    </div>
+  </div> -->
+  <owl-carousel-o [options]="partnersliderOptions1"> 
+    <ng-template carouselSlide >
+      <video class="background-video" id="backgroundimage" autoplay loop muted playsinline preload="auto">
+        <source src="../../../assets/video1.mp4" type="video/mp4">
+      </video>
+      <div class="text-banner">
+        <h2>Revolution in 3D Imaging - Ziehm Imaging, Germany</h2>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide >
+      <video class="background-video" id="backgroundimage" autoplay loop muted playsinline preload="auto">
+        <source src="../../../assets/video2.mp4" type="video/mp4">
+      </video>
+      <div class="text-banner">
+        <h2>3D Image Fusion Technology in hydrabad C-Arm / Cathlab - Endonaut AI & PAD Therenva, France</h2>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide >
+      <video class="background-video" id="backgroundimage" autoplay loop muted playsinline preload="auto">
+        <source src="../../../assets/video3.mp4" type="video/mp4">
+      </video>
+      <div class="text-banner">
+        <h2>A True HFO Technique for PICU & NICU - Mrtran, Japan</h2>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide >
+      <video class="background-video" id="backgroundimage" autoplay loop muted playsinline preload="auto">
+        <source src="../../../assets/video4.mp4" type="video/mp4">
+      </video>
+      <div class="text-banner">
+        <h2>BenQ Medical Technology - Corp, Taiwan</h2>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide >
+      <video class="background-video" id="backgroundimage" autoplay loop muted playsinline preload="auto">
+        <source src="../../../assets/video5.mp4" type="video/mp4">
+      </video>
+      <div class="text-banner">
+        <h2>BenQ Medical Technology - Corp, Taiwan</h2>
+      </div>
+    </ng-template>
+</owl-carousel-o>
 
   <!-- <img
     class="background-image"

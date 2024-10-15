@@ -2,9 +2,9 @@
   <!-- <header class="self-center mt-5 text-center" style="font-family: 'Lato', sans-serif; font-size: 24px; line-height: 25px; color:#000000">
     OUR EXPERTS
   </header> -->
-  <header class="text-center" style="color: #000;font:Lato, sans-serif; font-size: 1.875rem;font-weight:700;" *ngIf="data.length">Our Experts</header> 
+  <header class="text-center" style="color: #000;font:Lato, sans-serif; font-size: 1.875rem;font-weight:700;" >Our Experts</header> 
   <!--<h1
-    class="self-center mt-4 portfolio-header font-bold leading-10 text-center text-black max-md:max-w-full" *ngIf="data.length"
+    class="self-center mt-4 portfolio-header font-bold leading-10 text-center text-black max-md:max-w-full" 
   >
     Lorem ipsum dolor sit ipsum dolor site
   </h1>-->
@@ -43,7 +43,7 @@
           class="grow mt-0 w-200 aspect-[0.84] max-md:mt-10"
         />
       </figure> -->
-      <section class="content-wrapper mt-5" *ngIf="data.length">
+      <section class="content-wrapper mt-5">
         <div class="content-container" *ngIf="data">
           <div class="text-media-container" *ngFor="let item of data.slice(0, 1); let i=index;">
             <section class="text-content">
@@ -83,11 +83,11 @@
     <!-- </div> -->
   <!-- </article> -->
   <section
-    class="mt-10 w-full text-2xl font-semibold leading-6 text-black max-md:mt-10 max-md:max-w-full" *ngIf="r_data.length"
+    class="mt-10 w-full text-2xl font-semibold leading-6 text-black max-md:mt-10 max-md:max-w-full" 
   >
     Related Videos
   </section>
-  <div class="mt-8 w-full max-md:max-w-full" *ngIf="r_data.length">
+  <div class="mt-8 w-full max-md:max-w-full" >
     <section class="flex gap-5 max-md:flex-col max-md:gap-0" *ngIf="r_data">
       <article class="flex flex-col w-[25%] max-md:ml-0 max-md:w-full" *ngFor="let item of r_data.slice(0, 4); let i=index;">
         <div class="flex flex-col grow font-bold text-black max-md:mt-8">

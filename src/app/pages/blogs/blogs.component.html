@@ -10,7 +10,7 @@
     
 
     <div class="gap-10" *ngIf="datas">
-      <section class="portfolio-content" *ngIf="datas.length">
+      <section class="portfolio-content" >
         <article *ngFor="let item of datas; let i=index;" class="shadow-[0px_12px_16px_-4px_rgba(16,_24,_40,_0.08)] flex flex-col px-6 pt-6 pb-8 shrink-0 rounded-xl bg-white portfolio-item">
           <img loading="lazy" src="{{asset_url}}/blogs/{{item.image}}" alt="Design Image" class="w-full aspect-[1.47]" /> 
           <p class="mt-8 text-sm font-bold leading-5 text-violet-700">{{item.category}}</p>
