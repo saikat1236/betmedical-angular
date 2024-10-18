@@ -51,7 +51,7 @@ export class HomesliderComponent {
     loop: true,
     autoplay: true,
     autoplaySpeed:1000,
-    // autoplayTimeout:500,
+    autoplayTimeout:6000,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,

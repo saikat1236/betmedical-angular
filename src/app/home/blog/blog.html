@@ -10,7 +10,9 @@
     <section class="portfolio-content" *ngIf="data">
      <article *ngFor="let item of data.slice(0, 3); let i=index;" class="shadow-[0px_12px_16px_-4px_rgba(16,_24,_40,_0.08)] flex flex-col px-6 pt-6 pb-8 shrink-0 rounded-xl bg-white portfolio-item">
         <!-- <div *ngIf="i<3"> -->
-        <img loading="lazy" src="{{asset_url}}/blogs/{{item.image}}" alt="Design Image" class="w-full aspect-[1.47]" /> 
+        <a routerLink="/blog/{{item.slug}}">
+          <img loading="lazy" src="{{asset_url}}/blogs/{{item.image}}" alt="Design Image" class="w-full aspect-[1.47]" /> 
+        </a>
         <p class="mt-8 text-sm font-bold leading-5 text-violet-700">{{item.category}}</p>
         <h2 class="flex gap-4 mt-3 text-2xl font-semibold leading-8 text-gray-900">
           <a routerLink="/blog/{{item.slug}}">{{item.title}}</a>
